@@ -1,0 +1,23 @@
+OCR_ENGINE:
+  - PYTESSERACT
+  - EASYOCR
+
+PYTESSERACT:
+  CONFIG:
+    DEFAULT: ""
+    ONE: "--psm 6 --oem 3"
+    TWO: "--psm 6 --oem 3"
+    THREE: "--psm 6 --oem 3"
+    FOUR: "--psm 6 --oem 3"
+  LANG:
+    ENGLISH: "eng"
+    HINDI: "hin"
+    HIN_ENG: "hin+eng"
+    ENGLISH_HINDI: "eng+hin"
+
+EASYOCR:
+  LANG:
+    ENGLISH: "en"
+    HINDI: "hi"
+    HIN_ENG: "hi+en"
+    ENGLISH_HINDI: "en+hi"

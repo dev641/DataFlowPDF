@@ -1,0 +1,18 @@
+thresholds:
+  voter_box:
+    position_threshold: 500 # X, Y coordinate difference threshold
+    size_threshold: 200 # Width, Height difference threshold
+    area:
+      min: 2000000 # Minimum area threshold
+      max: 3000000 # Maximum area threshold
+    aspect_ratio:
+      min: 2.4 # Minimum aspect ratio
+      max: 2.6 # Maximum aspect ratio
+  passport_box:
+    area_threshold_range:
+      min: 0.05 # 5% of image area
+      max: 0.15 # 15% of image area
+    aspect_ratio_range:
+      min: 0.7 # Minimum aspect ratio
+      max: 1.5 # Maximum aspect ratio
+
