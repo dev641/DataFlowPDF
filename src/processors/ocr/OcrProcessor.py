@@ -3,25 +3,31 @@ import easyocr
 
 
 class OcrProcessor:
-    def __init__(self, ocr_engine='pytesseract'):
+    def __init__(self, ocr_engine="pytesseract"):
         self.ocr_engine = ocr_engine
-    
+
     def process_ocr(self, image, config, lang):
         """
         Process OCR on the given images using the selected OCR engine.
         """
-        if self.ocr_engine == 'pytesseract':
-            print(f"Using {self.ocr_engine} for OCR processing on image: {image}")
+        if self.ocr_engine == "pytesseract":
+            print(
+                f"Using {self.ocr_engine} for OCR processing on image: {image}"
+            )
             return self._use_pytesseract(image=image, config=config, lang=lang)
-        elif self.ocr_engine == 'easyocr':
-            print(f"Using {self.ocr_engine} for OCR processing on images: {image}")
+        elif self.ocr_engine == "easyocr":
+            print(
+                f"Using {self.ocr_engine} for OCR processing on images: {image}"
+            )
             return self._use_easyocr(image)
         else:
             raise ValueError(f"Unsupported OCR engine: {self.ocr_engine}")
-    
+
     def _use_pytesseract(self, image, config, lang):
         try:
-            text = pytesseract.image_to_string(image=image, config=config, lang=lang)
+            text = pytesseract.image_to_string(
+                image=image, config=config, lang=lang
+            )
             return text
         except pytesseract.TesseractError as e:
             print(f"Error processing image with pytesseract: {e}")
@@ -29,7 +35,7 @@ class OcrProcessor:
         except Exception as e:
             print(f"An unexpected error ocurred during OCR:{e}")
             return None
-        
+
     def _use_easyocr(self, image, config, lang):
         try:
             reader = easyocr.Reader(lang_list=lang)

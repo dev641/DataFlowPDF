@@ -1,4 +1,3 @@
-
 import fitz
 import os
 import pandas as pd
@@ -6,9 +5,11 @@ import re
 import numpy as np
 import cv2 as cv
 
+
 class ImageProcessor:
     def __init__(self):
         pass
+
     def extract_roi_from_image(image):
         try:
             # Ensure the output directory exists
@@ -27,14 +28,16 @@ class ImageProcessor:
             edges = cv.Canny(blurred, 50, 150)
 
             # Step 3: Find contours
-            contours, _ = cv.findContours(edges, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+            contours, _ = cv.findContours(
+                edges, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE
+            )
 
             # Initialize variables for storing detected rectangles
             large_rectangles = []
             roi_images = []
             crop_counter = 1
             position_threshold = 500  # X, Y coordinate difference threshold
-            size_threshold = 200      # Width, Height difference threshold
+            size_threshold = 200  # Width, Height difference threshold
             min_area_threshold = 2000000
             max_area_threshold = 3000000
             min_aspect_ratio = 2.4
@@ -47,18 +50,27 @@ class ImageProcessor:
                 aspect_ratio = w / h
 
                 # Filter by area and aspect ratio to detect only large rectangles
-                if min_area_threshold < area < max_area_threshold and min_aspect_ratio < aspect_ratio < max_aspect_ratio:
+                if (
+                    min_area_threshold < area < max_area_threshold
+                    and min_aspect_ratio < aspect_ratio < max_aspect_ratio
+                ):
                     # Check for duplicates based on area
-                    duplicate = is_duplicate_coords(coords_list=large_rectangles, contour=contour,
-                                                    position_threshold=position_threshold, size_threshold=size_threshold)
-                    
+                    duplicate = is_duplicate_coords(
+                        coords_list=large_rectangles,
+                        contour=contour,
+                        position_threshold=position_threshold,
+                        size_threshold=size_threshold,
+                    )
+
                     if not duplicate:
                         large_rectangles.append((x, y, w, h))
-                        
+
                         # Draw the rectangle on the original image
-                        cv.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 20)
+                        cv.rectangle(
+                            image, (x, y), (x + w, y + h), (0, 255, 0), 20
+                        )
                         # Crop the rectangle from the original image
-                        cropped_image = image[y:y + h, x:x + w]
+                        cropped_image = image[y : y + h, x : x + w]
                         roi_images.append(cropped_image)
                         # image_name = get_filename_part(image_path, part=FileNamePart.WITHOUT_EXTENSION)
 
@@ -81,6 +93,7 @@ class ImageProcessor:
         except Exception as e:
             print(f"An unexpected error occurred: {e}")
             return None
+
 
 # Example usage
 # large_rectangles = extract_roi_from_image(image_path="images/page.png", roi_path="images/roi")

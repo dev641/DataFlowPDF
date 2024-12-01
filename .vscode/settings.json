@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["EASYOCR", "fitz", "PYTESSERACT"]
+  "cSpell.words": ["EASYOCR", "fitz", "pycache", "PYTESSERACT", "मकान"],
+  "editor.formatOnSave": true,
+  // "python.formatting.provider": "black"
+  "notebook.defaultFormatter": "ms-python.black-formatter",
+  "editor.defaultFormatter": "ms-python.black-formatter"
 }

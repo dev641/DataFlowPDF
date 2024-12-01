@@ -1,0 +1,9 @@
+[tool.black]
+line-length = 79  # Enforces PEP 8 line length
+target-version = ['py312']  # Target Python version (e.g., Python 3.8)
+skip-string-normalization = true  # Avoid changing single quotes to double quotes
+exclude = '''(
+    .*/tests/.*|  # Exclude files in tests directory
+    .*/build/.*|  # Exclude files in build directory
+    .*/dist/.*|   # Exclude files in dist directory
+)'''
