@@ -79,24 +79,3 @@ class CaseConverter:
             return CaseConverter.to_upper_snake_case(input_string)
         else:
             raise ValueError("Unsupported target case")
-
-
-# Example usage
-input_str = "HelloWorld_example_string"
-
-# Convert to various cases
-print(
-    CaseConverter.convert(input_str, CaseType.SNAKE_CASE)
-)  # hello_world_example_string
-print(
-    CaseConverter.convert(input_str, CaseType.CAMEL_CASE)
-)  # helloWorldExampleString
-print(
-    CaseConverter.convert(input_str, CaseType.PASCAL_CASE)
-)  # HelloWorldExampleString
-print(
-    CaseConverter.convert(input_str, CaseType.KEBAB_CASE)
-)  # hello-world-example-string
-print(
-    CaseConverter.convert(input_str, CaseType.UPPERCASE_SNAKE_CASE)
-)  # hello-world-example-string
