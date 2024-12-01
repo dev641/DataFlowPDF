@@ -9,4 +9,11 @@ project_root = os.path.abspath(os.path.join(current_dir, ".."))  # One level up
 sys.path.append(project_root)
 
 # Now you can import config
-from config.settings import CONFIG_DIR
+from config.settings import CONFIG_DIR, CONFIG_FILES_DIR
+
+from config.config_loader import load_enums
+
+
+def start():
+    # Load the configuration
+    config = load_enums(yaml_dir=CONFIG_FILES_DIR)

@@ -21,11 +21,10 @@ class ConfigLoader:
         )
 
 
-if __name__ == "__main__":
+def load_enums(yaml_dir=CONFIG_FILES_DIR):
     # Instantiate ConfigLoader with paths
     loader = ConfigLoader(
         yaml_dir=CONFIG_FILES_DIR, output_file=CONFIG_FILE_PATH
     )
-
     # Generate Enums
     loader.update_enum()
