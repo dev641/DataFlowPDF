@@ -43,5 +43,5 @@ class OcrProcessor:
             detection = "\n".join([det[1] for det in result])
             return detection
         except Exception as e:
-            print(f"An unexpected error ocurred during easyOCR:{e}")
+            print(f"An unexpected error occurred during easyOCR:{e}")
             return None
