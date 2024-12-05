@@ -1,18 +1,106 @@
-thresholds:
-  voter_box:
-    position_threshold: 500 # X, Y coordinate difference threshold
-    size_threshold: 200 # Width, Height difference threshold
-    area:
-      min: 2000000 # Minimum area threshold
-      max: 3000000 # Maximum area threshold
-    aspect_ratio:
-      min: 2.4 # Minimum aspect ratio
-      max: 2.6 # Maximum aspect ratio
+counters:
+  image_roi:
+    mode: 
+      value:  cv.RETR_EXTERNAL
+      type: variable
+    method: 
+      value:  cv.CHAIN_APPROX_SIMPLE
+      type: variable
   passport_box:
-    area_threshold_range:
-      min: 0.05 # 5% of image area
-      max: 0.15 # 15% of image area
-    aspect_ratio_range:
-      min: 0.7 # Minimum aspect ratio
-      max: 1.5 # Maximum aspect ratio
+    mode: 
+      value:  cv.RETR_TREE
+      type: variable
+    method: 
+      value:  cv.CHAIN_APPROX_SIMPLE
+      type: variable
 
+blur:
+  image_roi:
+    ksize:
+      type: variable
+      value: (13, 13)      
+    SigmaX: 0
+  process_roi:
+    ksize:
+      type: variable
+      value: (13, 13)
+    SigmaX: 0
+  passport_box:
+    ksize:
+      type: variable
+      value: (5, 5)
+    SigmaX: 0
+
+de_noise:
+  process_roi:
+    h: 30
+    templateWindowSize: 7
+    searchWindowSize: 21
+
+kernel:
+  process_roi:
+    array: [[0, -1, 0], [-1, 5, -1], [0, -1, 0]]
+
+filter2D:
+  process_roi:
+   ddepth: -1
+
+edge_detection:  
+  image_roi:
+    Canny:
+      Threshold1: 50
+      Threshold2: 150
+  passport_box:
+    Canny:
+      Threshold1: 50
+      Threshold2: 150
+
+contour_area:
+  image_roi:
+    position_threshold: 500
+    size_threshold: 200
+    min_area_threshold: 2000000
+    max_area_threshold: 3000000
+    min_aspect_ratio: 2.4
+    max_aspect_ratio: 2.6
+  passport_box:
+    min_area_ratio: 0.05
+    max_area_ratio: 0.15
+    min_aspect_ratio: 0.7
+    max_aspect_ratio: 1.5
+
+
+threshold:
+  process_roi:
+    thresh: 100
+    max_value: 255
+    threshold_type:
+      type: variable
+      value: cv.THRESH_BINARY + cv.THRESH_OTSU
+
+morphology:
+  process_roi:
+    kernel:
+      type: variable
+      value: (3, 3)
+    Operation:
+      type: variable
+      value: cv.MORPH_CLOSE
+
+erode:
+  process_roi:
+    iterations: 1
+
+color:
+  green:
+    type: variable
+    value: (0, 255, 0)
+  blue:
+    type: variable
+    value: (255, 0, 0)
+  red:
+    type: variable
+    value: (0, 0, 255)
+
+border:
+  width: 20

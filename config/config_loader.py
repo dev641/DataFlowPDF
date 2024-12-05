@@ -1,9 +1,11 @@
 import yaml
 from pathlib import Path
 from src.enums.enum_factory import EnumFactory
-from settings import CONFIG_FILES_DIR, CONFIG_FILE_PATH
+from config.settings import CONFIG_FILES_DIR, CONFIG_FILE_PATH
 from src.enums.enums import FileNamePart
 from src.utils.utils import get_filename_part
+
+from config.config_files.config import ImageProcess
 
 
 class ConfigLoader:
@@ -28,3 +30,7 @@ def load_enums(yaml_dir=CONFIG_FILES_DIR):
     )
     # Generate Enums
     loader.update_enum()
+
+
+def test_enum():
+    print(ImageProcess.Counters.ImageRoi.MODE)

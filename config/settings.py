@@ -17,3 +17,5 @@ PDF_PATH = PDF_DIR / "2024-FC-EROLLGEN-S04-196-FinalRoll-Revision5-HIN-1.pdf"
 
 # Pattern Settings
 VOTER_ID_PATTERN = r"\b([A-Z]{2}/\d{2}/\d{3}/\d{6})|([A-Z]{3}\d{7})\b"
+
+IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".tif"]

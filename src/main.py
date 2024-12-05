@@ -17,3 +17,7 @@ from config.config_loader import load_enums
 def start():
     # Load the configuration
     config = load_enums(yaml_dir=CONFIG_FILES_DIR)
+
+
+if __name__ == "__main__":
+    start()

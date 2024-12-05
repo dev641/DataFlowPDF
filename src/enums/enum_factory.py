@@ -3,7 +3,8 @@ from pathlib import Path
 import yaml
 from src.utils.utils import to_pascal_case, get_filename_part
 from src.utils.texts.case_converter import CaseConverter
-from src.enums.enums import FileNamePart, CaseType
+from src.enums.enums import FileNamePart, CaseType, FieldType
+from collections.abc import Iterable
 
 
 class EnumFactory:
@@ -49,7 +50,8 @@ class EnumFactory:
             output_file (Path): Path to the output Python file.
         """
         lines = [
-            "from enum import Enum\n\n"
+            "from enum import Enum",
+            "import cv2 as cv\n\n",
         ]  # Initialize the generated file content
 
         # Generate an enum for each YAML file
@@ -72,30 +74,54 @@ class EnumFactory:
             file.writelines("\n".join(lines))
 
     @staticmethod
+    def _format_enum_value(value):
+        """
+        Formats the enum value based on its type.
+        """
+        if (
+            isinstance(value, dict)
+            and 'type' in value
+            and value['type'] == FieldType.VARIABLE.value
+        ):
+            # Handle the case where 'type' is present in the dictionary
+            enum_value = value["value"]
+        else:
+            # Handle the case where 'type' is not present or not a dictionary
+            if isinstance(value, Iterable) and 'value' in value:
+                enum_value = repr(value['value'])
+            else:
+                enum_value = repr(value)
+        return enum_value
+
+    @staticmethod
     def _handle_nested_dict(class_name, config, lines, indent=0):
         """
         Handles nested dictionaries and generates enum-like structures.
         """
-        indent_space = "    " * indent
-        lines.append(f"{indent_space}class {class_name}(Enum):")
-        for key, value in config.items():
-            if isinstance(value, dict):
-                # Recursively handle nested dictionaries
-                class_name = CaseConverter.convert(
-                    input_string=key, target_case=CaseType.PASCAL_CASE
-                )
-                EnumFactory._handle_nested_dict(
-                    class_name=class_name,
-                    config=value,
-                    lines=lines,
-                    indent=indent + 1,
-                )
-            else:
-                key = CaseConverter.convert(
-                    input_string=key, target_case=CaseType.UPPERCASE_SNAKE_CASE
-                )
-                # Add key-value pair to enum
-                lines.append(f"{indent_space}    {key} = {repr(value)}")
+        if config is not None:
+            indent_space = "    " * indent
+            lines.append(f"{indent_space}class {class_name}:")
+            for key, value in config.items():
+                if isinstance(value, dict) and 'type' not in value:
+                    # Recursively handle nested dictionaries
+                    class_name = CaseConverter.convert(
+                        input_string=key, target_case=CaseType.PASCAL_CASE
+                    )
+                    EnumFactory._handle_nested_dict(
+                        class_name=class_name,
+                        config=value,
+                        lines=lines,
+                        indent=indent + 1,
+                    )
+                else:
+                    key = CaseConverter.convert(
+                        input_string=key,
+                        target_case=CaseType.UPPERCASE_SNAKE_CASE,
+                    )
+                    # Add key-value pair to enum
+                    lines.append(
+                        f"{indent_space}    {key} = {EnumFactory._format_enum_value(value)}"
+                    )
 
         # Add a blank line for separation
         lines.append("")

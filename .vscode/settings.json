@@ -1,10 +1,20 @@
 {
   "cSpell.words": [
+    "ddepth",
+    "denoised",
+    "Denoising",
     "EASYOCR",
     "fitz",
+    "frombuffer",
+    "imdecode",
+    "imencode",
+    "IMREAD",
+    "ksize",
+    "maxval",
     "pycache",
     "PYTESSERACT",
     "readtext",
+    "tobytes",
     "मकान"
   ],
   "editor.formatOnSave": true,
