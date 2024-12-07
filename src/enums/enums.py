@@ -1,6 +1,12 @@
 from enum import Enum
 
 
+class OcrEngine(Enum):
+    TENSORFLOW = "tensorflow"
+    PYTESSERACT = "pytesseract"
+    EASYOCR = "easyocr"
+
+
 # Define an Enum class
 class FileNamePart(Enum):
     FULL = "full"  # Represents the full filename with extension

@@ -2,7 +2,7 @@ from enum import Enum
 from pathlib import Path
 import yaml
 from src.utils.utils import to_pascal_case, get_filename_part
-from src.utils.texts.case_converter import CaseConverter
+from src.processors.text.case_converter import CaseConverter
 from src.enums.enums import FileNamePart, CaseType, FieldType
 from collections.abc import Iterable
 

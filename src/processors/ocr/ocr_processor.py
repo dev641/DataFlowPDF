@@ -1,21 +1,22 @@
 import pytesseract
 import easyocr
+from src.enums.enums import OcrEngine
 
 
 class OcrProcessor:
-    def __init__(self, ocr_engine="pytesseract"):
+    def __init__(self, ocr_engine=OcrEngine.PYTESSERACT):
         self.ocr_engine = ocr_engine
 
     def process_ocr(self, image, config, lang):
         """
         Process OCR on the given images using the selected OCR engine.
         """
-        if self.ocr_engine == "pytesseract":
+        if self.ocr_engine == OcrEngine.PYTESSERACT:
             print(
                 f"Using {self.ocr_engine} for OCR processing on image: {image}"
             )
             return self._use_pytesseract(image=image, config=config, lang=lang)
-        elif self.ocr_engine == "easyocr":
+        elif self.ocr_engine == OcrEngine.EASYOCR:
             print(
                 f"Using {self.ocr_engine} for OCR processing on images: {image}"
             )

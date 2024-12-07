@@ -34,14 +34,3 @@ def get_filename_part(pathname: str, part: FileNamePart = FileNamePart.FULL):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
         return None
-
-
-def to_pascal_case(input_string: str) -> str:
-    # Split the string by '_', capitalize each part, and join them together
-    return "".join(word.capitalize() for word in input_string.split("_"))
-
-
-def to_camel_case(input_string: str) -> str:
-    # Split the string by '_', lower first word, then capitalize each part, and join them together
-    words = input_string.split("_")
-    return words[0].lower() + "".join(word.capitalize() for word in words[1:])
