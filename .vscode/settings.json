@@ -11,9 +11,11 @@
     "IMREAD",
     "ksize",
     "maxval",
+    "pdfs",
     "pycache",
     "PYTESSERACT",
     "readtext",
+    "Tesseract",
     "tobytes",
     "मकान"
   ],

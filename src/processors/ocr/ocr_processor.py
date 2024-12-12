@@ -34,10 +34,10 @@ class OcrProcessor:
             print(f"Error processing image with pytesseract: {e}")
             return None
         except Exception as e:
-            print(f"An unexpected error ocurred during OCR:{e}")
+            print(f"An unexpected error occurred during OCR:{e}")
             return None
 
-    def _use_easyocr(self, image, config, lang):
+    def _use_easyocr(self, image, lang):
         try:
             reader = easyocr.Reader(lang_list=lang)
             result = reader.readtext(image)
