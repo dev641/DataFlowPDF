@@ -5,6 +5,7 @@ import sys
 ROOT_DIR = Path(__file__).resolve().parent.parent
 CONFIG_DIR = Path(__file__).resolve().parent
 CONFIG_FILES_DIR = CONFIG_DIR / "config_files"
+OCR_CORRECTIONS_PATH = CONFIG_FILES_DIR / "ocr_corrections.json"
 CONFIG_FILE_PATH = CONFIG_FILES_DIR / "config.py"
 DATA_DIR = ROOT_DIR / "data"
 SRC_DIR = ROOT_DIR / "src"
