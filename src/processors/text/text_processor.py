@@ -1,5 +1,5 @@
 from config.config_loader import load_json
-from src.decorator.class_decorator import (
+from src.decorator.decorator import (
     correct_misspelled_word,
     hindi_to_english_digits,
     format_pattern,
@@ -20,6 +20,7 @@ class TextProcessor:
         # self.text = text
         pass
 
+    @staticmethod
     def _extract_user_data(self, roi_data):
         user_data = []
         for data_list in roi_data:
@@ -38,6 +39,7 @@ class TextProcessor:
                     user_data.append(['id', data_list])
         return user_data
 
+    @staticmethod
     def _convert_digits_in_user_data(self, user_data):
         return [
             (
@@ -48,6 +50,7 @@ class TextProcessor:
             for item in user_data
         ]
 
+    @staticmethod
     def _create_user_dict(self, user_data):
         return {
             item[0] if len(item) > 0 and item[0] else None: (
@@ -56,6 +59,7 @@ class TextProcessor:
             for item in user_data
         }
 
+    @staticmethod
     @clean_empty_lines
     @normalize_text
     @format_pattern(
