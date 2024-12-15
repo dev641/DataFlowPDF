@@ -99,6 +99,7 @@ class OcrProcess:
             TWO = '--psm 6 --oem 3'
             THREE = '--psm 6 --oem 3'
             FOUR = '--psm 6 --oem 3'
+            FIVE = '--psm 3 --dpi 600'
 
         class Lang:
             ENGLISH = 'eng'
