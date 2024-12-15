@@ -1,9 +1,33 @@
 import json
 import xml.etree.ElementTree as ET
 import pandas as pd
+from datetime import datetime
+import uuid
+from pathlib import Path
+from config.settings import PDF_OUTPUT_PATH
 
 
 class FileSaver:
+
+    @staticmethod
+    def save_data(data, file_name: str, output_path: Path = PDF_OUTPUT_PATH):
+        filename = FileSaver.generate_unique_filename(filename=file_name)
+        file_path = output_path / filename
+        FileSaver.save_to_json(data=data, file_path=f"{file_path}.json")
+        FileSaver.save_to_excel(data=data, file_path=f"{file_path}.xlsx")
+
+    @staticmethod
+    def generate_unique_filename(filename: str, prefix: str = "") -> str:
+        # Get timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        # Get unique ID
+        unique_id = str(uuid.uuid4())[:8]
+
+        # Combine components
+        filename = f"{prefix}_{filename}_{timestamp}_{unique_id}"
+
+        return filename
 
     @staticmethod
     def save_to_json(data: dict, file_path: str):

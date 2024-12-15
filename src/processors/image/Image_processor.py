@@ -5,8 +5,9 @@ import re
 import numpy as np
 import cv2 as cv
 from config.config_files.config import ImageProcess
-from src.enums.enums import ImageType
+from src.enums.enums import ImageType, ImageExtensions
 import base64
+from config.settings import NUM_SECTION
 
 
 class ImageProcessor:
@@ -153,7 +154,7 @@ class ImageProcessor:
         size_threshold,
         color,
         color_width,
-        ext='png',
+        ext=ImageExtensions.PNG.get_extension(),
     ):
         # Initialize variables for storing detected rectangles
         large_rectangles = []
@@ -194,7 +195,6 @@ class ImageProcessor:
                         roi_images.append(cropped_image)
                 elif type == ImageType.PASSPORT:
                     detected_passport = image[y : y + h, x : x + w]
-                    ext = ext if ext.startswith('.') else '.' + ext
                     success, binary_passport_image = cv.imencode(
                         ext=ext, img=detected_passport
                     )
@@ -257,7 +257,9 @@ class ImageProcessor:
             print(f"An unexpected error occurred: {e}")
             return None
 
-    def extract_passport_photo(self, image, ext):
+    def _extract_passport_photo(
+        self, image, ext=ImageExtensions.PNG.get_extension()
+    ):
         # load config
         blur = self.blur.PassportBox
         edge_detection = self.edge_detection.PassportBox
@@ -290,10 +292,32 @@ class ImageProcessor:
             size_threshold=contour_area.SIZE_THRESHOLD,  # Width, Height difference threshold
             color=color,
             color_width=color_width,
-            ext='png',
+            ext=ext,
         )
 
-    def image_to_base64(image, ext='png'):
+    def extract_passport_image_in_base64_format(self, roi):
+        try:
+            is_success, binary_image = self._extract_passport_photo(roi)
+            if is_success:
+                return is_success, self.image_to_base64(
+                    binary_image, ext=ImageExtensions.PNG.get_extension()
+                )
+            return is_success, None
+        except ValueError:
+            print("Error: Failed to extract passport photo from ROI")
+            return None
+        except Exception as e:
+            print(f"Error converting passport photo to base64: {str(e)}")
+            return None
+
+    def split_roi_into_sides(self, image, num_sections=NUM_SECTION):
+        _, width = image.shape[:num_sections]
+        # Define the two regions by slicing the image
+        left_side = image[:, : width // num_sections]  # Left half
+        right_side = image[:, width // num_sections :]  # Right half
+        return left_side, right_side
+
+    def image_to_base64(image, ext=ImageExtensions.PNG.get_extension()):
         """
         Converts an image to a base64-encoded string.
 
@@ -309,7 +333,7 @@ class ImageProcessor:
                 raise FileNotFoundError("The provided image is None.")
 
             # Encode the image to memory buffer as specified format (e.g., PNG)
-            _, buffer = cv.imencode(f".{ext}", image)
+            _, buffer = cv.imencode(ext=ext, img=image)
 
             # Convert the image buffer to base64
             base64_str = base64.b64encode(buffer).decode('utf-8')

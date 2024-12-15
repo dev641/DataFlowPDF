@@ -41,7 +41,7 @@ class EnumFactory:
             raise ValueError("Top-level data must be a dictionary.")
 
     @staticmethod
-    def generate_enum_code(yaml_dir: Path, output_file: Path):
+    def generate_enum_code(config_dir: Path, output_file: Path):
         """
         Generates Python Enums from all YAML files in the specified directory.
 
@@ -55,7 +55,7 @@ class EnumFactory:
         ]  # Initialize the generated file content
 
         # Generate an enum for each YAML file
-        for yaml_file in yaml_dir.glob("*.yml"):
+        for yaml_file in config_dir.glob("*.yml"):
             with open(yaml_file, "r") as file:
                 config = yaml.safe_load(file)
             class_name = get_filename_part(
