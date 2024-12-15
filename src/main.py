@@ -14,14 +14,26 @@ from config.settings import CONFIG_FILES_DIR, PDF_DIR
 from config.config_loader import load_enums
 
 from src.processors.pdf.pdf_processor import PdfProcessor
+from src.utils.logger import setup_logger
+
+# Initialize logger
+log = setup_logger(__name__)
 
 
 def start():
+    log.info("Starting PDF processing application")
+
     # Load the configuration
+    log.debug("Loading configuration from %s", CONFIG_FILES_DIR)
     config = load_enums(config_dir=CONFIG_FILES_DIR)
+    log.info("Configuration loaded successfully")
+
+    # Process PDF files
+    log.info("Scanning directory %s for PDF files", PDF_DIR)
     for pdf_path in PDF_DIR.glob('*.pdf'):
+        log.info("Processing PDF file: %s", pdf_path)
         pdf_processor = PdfProcessor(pdf_path=pdf_path)
-        pdf_processor.save_voter_information_from_pdf()
+        log.debug("PDF processor initialized for %s", pdf_path)
 
 
 if __name__ == "__main__":

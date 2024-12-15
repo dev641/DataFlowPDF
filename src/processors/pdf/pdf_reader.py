@@ -2,6 +2,9 @@ import fitz
 from PIL import Image
 from config.settings import IMAGE_DPI, IMAGE_MODE
 import numpy as np
+from utils.logger import setup_logger
+
+log = setup_logger(__name__)
 
 
 class PdfReader:
@@ -9,51 +12,75 @@ class PdfReader:
         self.file_path = file_path
 
     def read_pdf(self):
+        log.info(f"Starting to read PDF file: {self.file_path}")
         try:
+            log.debug("Opening PDF file with fitz")
             with fitz.open(self.file_path) as pdf:
+                log.info(
+                    f"Successfully opened PDF with {pdf.page_count} pages"
+                )
                 return pdf
+
         except fitz.FileDataError:
-            print(f"Error: Invalid or corrupted PDF file: {self.file_path}")
+            log.error(f"Invalid or corrupted PDF file: {self.file_path}")
             return None
         except FileNotFoundError:
-            print(f"Error: PDF file not found: {self.file_path}")
+            log.error(f"PDF file not found: {self.file_path}")
             return None
         except Exception as e:
-            print(f"Error reading PDF file {self.file_path}: {str(e)}")
+            log.error(f"Error reading PDF file {self.file_path}: {str(e)}")
             return None
 
     def _get_page_from_pdf(self, pdf, page_num):
+        log.info(f"Getting page {page_num} from PDF")
         try:
-            return pdf[page_num]
+            log.debug(f"Accessing page {page_num}")
+            page = pdf[page_num]
+            log.info(f"Successfully retrieved page {page_num}")
+            return page
+
         except IndexError:
-            print(f"Error: Page number {page_num} is out of range")
+            log.error(f"Page number {page_num} is out of range")
             return None
         except ValueError:
-            print(f"Error: Invalid page number {page_num}")
+            log.error(f"Invalid page number {page_num}")
             return None
         except Exception as e:
-            print(f"Error accessing page {page_num}: {str(e)}")
+            log.error(f"Error accessing page {page_num}: {str(e)}")
             return None
 
     def extract_image_from_pdf(self, pdf, page_num):
+        log.info(f"Starting image extraction from page {page_num}")
         try:
+            log.debug(f"Getting page {page_num} from PDF")
             page = self._get_page_from_pdf(pdf=pdf, page_num=page_num)
+
             if page is None:
+                log.error(f"Failed to get page {page_num}")
                 return None
 
+            log.debug(f"Creating pixmap with DPI={IMAGE_DPI}")
             pix = page.get_pixmap(dpi=IMAGE_DPI)
+
+            log.debug(f"Converting pixmap to image with mode {IMAGE_MODE}")
             img = Image.frombytes(
                 IMAGE_MODE, [pix.width, pix.height], pix.samples
             )
+
+            log.debug("Converting image to numpy array")
             img_np = np.array(img)
+
+            log.info("Successfully extracted image from PDF")
             return img_np
 
         except AttributeError:
-            print(f"Error: Invalid page object or missing pixmap method")
+            log.error("Invalid page object or missing pixmap method")
             return None
         except ValueError:
-            print(f"Error: Invalid image data or conversion failed")
+            log.error("Invalid image data or conversion failed")
             return None
         except Exception as e:
-            print(f"Error extracting image from PDF page {page_num}: {str(e)}")
+            log.error(
+                f"Error extracting image from PDF page {page_num}: {str(e)}"
+            )
             return None
