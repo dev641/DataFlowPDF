@@ -8,7 +8,7 @@ from config.config_files.config import ImageProcess
 from src.enums.enums import ImageType, ImageExtensions
 import base64
 from config.settings import NUM_SECTION
-from utils.logger import setup_logger
+from src.utils.logger import setup_logger
 
 log = setup_logger(__name__)
 

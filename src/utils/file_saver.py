@@ -5,7 +5,7 @@ from datetime import datetime
 import uuid
 from pathlib import Path
 from config.settings import PDF_OUTPUT_PATH
-from utils.logger import setup_logger
+from src.utils.logger import setup_logger
 
 log = setup_logger(__name__)
 

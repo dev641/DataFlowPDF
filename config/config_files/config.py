@@ -35,7 +35,7 @@ class ImageProcess:
         class ProcessRoi:
             ARRAY = [[0, -1, 0], [-1, 5, -1], [0, -1, 0]]
 
-    class Filter2d:
+    class Filter2D:
         class ProcessRoi:
             DDEPTH = -1
 
@@ -99,7 +99,7 @@ class OcrProcess:
             TWO = '--psm 6 --oem 3'
             THREE = '--psm 6 --oem 3'
             FOUR = '--psm 6 --oem 3'
-            FIVE = '--psm 3 --dpi 600'
+            FIVE = '--psm 3 --dpi 900'
 
         class Lang:
             ENGLISH = 'eng'

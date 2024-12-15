@@ -2,7 +2,7 @@ import fitz
 from PIL import Image
 from config.settings import IMAGE_DPI, IMAGE_MODE
 import numpy as np
-from utils.logger import setup_logger
+from src.utils.logger import setup_logger
 
 log = setup_logger(__name__)
 
@@ -11,7 +11,7 @@ class PdfReader:
     def __init__(self, file_path):
         self.file_path = file_path
 
-    def read_pdf(self):
+    def process_pdf(self, process_func):
         log.info(f"Starting to read PDF file: {self.file_path}")
         try:
             log.debug("Opening PDF file with fitz")
@@ -19,7 +19,7 @@ class PdfReader:
                 log.info(
                     f"Successfully opened PDF with {pdf.page_count} pages"
                 )
-                return pdf
+                process_func(pdf)
 
         except fitz.FileDataError:
             log.error(f"Invalid or corrupted PDF file: {self.file_path}")

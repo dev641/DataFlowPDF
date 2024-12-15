@@ -1,6 +1,6 @@
 from config.config_loader import load_json
 import re
-from utils.logger import setup_logger
+from src.utils.logger import setup_logger
 
 log = setup_logger(__name__)
 

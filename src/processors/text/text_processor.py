@@ -10,10 +10,10 @@ from config.settings import (
     VOTER_ID_PATTERN,
     OCR_CORRECTIONS_PATH,
     HIN_ENG_DIGITS_PATH,
-    GenderAgePAttern,
 )
+from src.enums.enums import GenderAgePAttern
 import re
-from utils.logger import setup_logger
+from src.utils.logger import setup_logger
 
 log = setup_logger(__name__)
 
@@ -51,6 +51,7 @@ class TextProcessor:
         return user_data
 
     @staticmethod
+    @hindi_to_english_digits(filePath=HIN_ENG_DIGITS_PATH)
     def _convert_digits_in_user_data(self, user_data):
         log.info("Starting digit conversion in user data")
         log.debug(f"Processing {len(user_data)} data items")

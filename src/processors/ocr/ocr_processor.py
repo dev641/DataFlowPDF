@@ -2,7 +2,7 @@ import pytesseract
 import easyocr
 from src.enums.enums import OcrEngine
 from config.config_files.config import OcrProcess
-from utils.logger import setup_logger
+from src.utils.logger import setup_logger
 
 log = setup_logger(__name__)
 

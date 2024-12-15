@@ -9,7 +9,7 @@ project_root = os.path.abspath(os.path.join(current_dir, ".."))  # One level up
 sys.path.append(project_root)
 
 # Now you can import config
-from config.settings import CONFIG_FILES_DIR, PDF_DIR
+from config.settings import CONFIG_FILES_DIR, PDF_DIR, PDF_PATH
 
 from config.config_loader import load_enums
 
@@ -30,10 +30,14 @@ def start():
 
     # Process PDF files
     log.info("Scanning directory %s for PDF files", PDF_DIR)
-    for pdf_path in PDF_DIR.glob('*.pdf'):
-        log.info("Processing PDF file: %s", pdf_path)
-        pdf_processor = PdfProcessor(pdf_path=pdf_path)
-        log.debug("PDF processor initialized for %s", pdf_path)
+    # for pdf_path in PDF_DIR.glob('*.pdf'):
+    #     log.info("Processing PDF file: %s", pdf_path)
+    #     pdf_processor = PdfProcessor(pdf_path=pdf_path)
+    #     log.debug("PDF processor initialized for %s", pdf_path)
+
+    pdf_processor = PdfProcessor(pdf_path=PDF_PATH)
+    log.debug("PDF processor initialized for %s", PDF_PATH)
+    pdf_processor.save_voter_information_from_pdf()
 
 
 if __name__ == "__main__":

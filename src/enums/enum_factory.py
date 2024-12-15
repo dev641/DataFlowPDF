@@ -5,7 +5,7 @@ from src.utils.utils import get_filename_part
 from src.processors.text.case_converter import CaseConverter
 from src.enums.enums import FileNamePart, CaseType, FieldType
 from collections.abc import Iterable
-from utils.logger import setup_logger
+from src.utils.logger import setup_logger
 
 log = setup_logger(__name__)
 

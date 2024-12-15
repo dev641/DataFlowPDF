@@ -5,8 +5,8 @@ from ..text.text_processor import TextProcessor
 from src.enums.enums import OcrEngine, ImageType
 from config.config_files.config import ImageProcess
 from config.settings import START_PAGE, PAGE_TO_EXCLUDE
-from utils.file_saver import FileSaver
-from utils.logger import setup_logger
+from src.utils.file_saver import FileSaver
+from src.utils.logger import setup_logger
 
 log = setup_logger(__name__)
 
@@ -99,20 +99,10 @@ class PdfProcessor:
         log.info(f"Completed processing {len(roi_images)} ROIs")
         return data
 
-    def save_voter_information_from_pdf(
-        self, start_page=START_PAGE, pages_to_exclude=PAGE_TO_EXCLUDE
-    ):
-        log.info(
-            f"Starting voter information extraction from PDF: {self.pdf_path}"
-        )
-
+    def _process_pdf(self, pdf, start_page, pages_to_exclude):
         pdf_reader = self.pdf_reader
         image_processor = self.image_processor
         voter_data = []
-
-        log.debug("Reading PDF file")
-        pdf = pdf_reader.read_pdf()
-
         if pdf:
             log.info(
                 f"Processing pages from {start_page} to {pdf.page_count - pages_to_exclude}"
@@ -141,3 +131,16 @@ class PdfProcessor:
             log.info(f"Successfully processed {len(voter_data)} pages")
             FileSaver.save_data(data=voter_data, file_name="voter_data")
             log.info("Voter data saved successfully")
+
+    def save_voter_information_from_pdf(
+        self, start_page=START_PAGE, pages_to_exclude=PAGE_TO_EXCLUDE
+    ):
+        log.info(
+            f"Starting voter information extraction from PDF: {self.pdf_path}"
+        )
+
+        pdf_reader = self.pdf_reader
+        log.debug("Reading PDF file")
+        pdf = pdf_reader.process_pdf(
+            lambda pdf: self._process_pdf(pdf, start_page, pages_to_exclude)
+        )

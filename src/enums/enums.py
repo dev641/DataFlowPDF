@@ -53,11 +53,11 @@ class ImageExtensions(Enum):
     def _generate_enum_values(cls):
         return {ext.upper().lstrip('.'): ext for ext in IMAGE_EXTENSIONS}
 
-    def __new__(cls):
-        cls_dict = cls._generate_enum_values()
-        for key, value in cls_dict.items():
-            cls._value2member_map_[value] = key
-        return super().__new__(cls)
+    def __new__(cls, value):
+        # Ensure the value is correctly passed to the base `Enum` class
+        obj = object.__new__(cls)
+        obj._value_ = value
+        return obj
 
     def get_extension(self, with_period: bool = True) -> str:
         return self.value if with_period else self.value.lstrip('.')
