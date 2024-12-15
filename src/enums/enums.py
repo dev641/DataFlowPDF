@@ -1,4 +1,9 @@
 from enum import Enum
+from config.settings import (
+    GENDER_AGE_PATTERN,
+    GENDER_AGE_PATTERN_REPLACEMENT,
+    IMAGE_EXTENSIONS,
+)
 
 
 class OcrEngine(Enum):
@@ -32,3 +37,27 @@ class ImageType(Enum):
     MASK_IMAGE = "mask_image"
     ORIGINAL_IMAGE = "original_image"
     PASSPORT = "passport"
+
+
+class GenderAgePAttern(Enum):
+    PATTERN = GENDER_AGE_PATTERN
+    REPLACEMENT = GENDER_AGE_PATTERN_REPLACEMENT
+
+
+class ImageExtensions(Enum):
+    PNG = ".png"
+    JPG = ".jpg"
+    JPEG = ".jpeg"
+
+    @classmethod
+    def _generate_enum_values(cls):
+        return {ext.upper().lstrip('.'): ext for ext in IMAGE_EXTENSIONS}
+
+    def __new__(cls):
+        cls_dict = cls._generate_enum_values()
+        for key, value in cls_dict.items():
+            cls._value2member_map_[value] = key
+        return super().__new__(cls)
+
+    def get_extension(self, with_period: bool = True) -> str:
+        return self.value if with_period else self.value.lstrip('.')
