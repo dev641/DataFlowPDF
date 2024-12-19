@@ -24,23 +24,28 @@ class TextProcessor:
         pass
 
     @staticmethod
-    def _extract_user_data(self, roi_data):
+    def _extract_user_data(roi_data):
         log.info("Starting user data extraction")
         user_data = []
 
         log.debug(f"Processing {len(roi_data)} data items")
+        roi_data = roi_data.split("\n")
         for data_list in roi_data:
             if ':' in data_list:
-                if data_list.count(':') > 1:
-                    log.debug(f"Multiple colons found in: {data_list}")
-                    data = data_list.split(" ")
-                    data = [i.strip().split(':') for i in data]
-                    user_data.extend(data)
-                else:
-                    log.debug(f"Single colon found in: {data_list}")
-                    data = data_list.split(":")
-                    data = [i.strip() for i in data]
-                    user_data.append(data)
+                log.debug(f"colon found in: {data_list}")
+                data = data_list.split(":")
+                data = [i.strip() for i in data]
+                user_data.append(data)
+                # if data_list.count(':') > 1:
+                #     log.debug(f"Multiple colons found in: {data_list}")
+                #     data = data_list.split(" ")
+                #     data = [i.strip().split(':') for i in data]
+                #     user_data.extend(data)
+                # else:
+                #     log.debug(f"Single colon found in: {data_list}")
+                #     data = data_list.split(":")
+                #     data = [i.strip() for i in data]
+                #     user_data.append(data)
             else:
                 data_list = re.sub(r"\s+", "", data_list)
                 if re.match(VOTER_ID_PATTERN, data_list):
@@ -52,24 +57,24 @@ class TextProcessor:
 
     @staticmethod
     @hindi_to_english_digits(filePath=HIN_ENG_DIGITS_PATH)
-    def _convert_digits_in_user_data(self, user_data):
+    def _convert_digits_in_user_data(user_data):
         log.info("Starting digit conversion in user data")
         log.debug(f"Processing {len(user_data)} data items")
 
-        converted_data = [
-            (
-                [item[0], self.convert_hindi_to_english_digits(item[1])]
-                if len(item) > 1
-                else item
-            )
-            for item in user_data
-        ]
+        # converted_data = [
+        #     (
+        #         [item[0], self.convert_hindi_to_english_digits(item[1])]
+        #         if len(item) > 1
+        #         else item
+        #     )
+        #     for item in user_data
+        # ]
 
-        log.info(f"Completed digit conversion for {len(converted_data)} items")
-        return converted_data
+        log.info(f"Completed digit conversion for {len(user_data)} items")
+        return user_data
 
     @staticmethod
-    def create_user_dict(self, user_data):
+    def create_user_dict(user_data):
         log.info("Starting user dictionary creation")
         log.debug(f"Processing {len(user_data)} user data items")
 
@@ -84,28 +89,28 @@ class TextProcessor:
         return user_dict
 
     @staticmethod
-    @clean_empty_lines
-    @normalize_text
-    @format_pattern(
-        pattern=GenderAgePAttern.PATTERN,
-        replacement=GenderAgePAttern.REPLACEMENT,
-    )
     @correct_misspelled_word(filePath=OCR_CORRECTIONS_PATH)
-    def format_text(self, roi_data):
+    @format_pattern(
+        pattern=GenderAgePAttern.PATTERN.value,
+        replacement=GenderAgePAttern.REPLACEMENT.value,
+    )
+    @normalize_text
+    @clean_empty_lines
+    def format_text(roi_data):
         try:
             log.info("Starting text formatting")
             log.debug(
                 f"Processing ROI data: {roi_data[:100]}..."
             )  # First 100 chars
 
-            user_data = self._extract_user_data(roi_data)
+            user_data = TextProcessor._extract_user_data(roi_data)
             log.debug(f"Extracted {len(user_data)} user data items")
 
             # Convert Hindi numerals to English
-            user_data = self._convert_digits_in_user_data(user_data)
+            user_data = TextProcessor._convert_digits_in_user_data(user_data)
             log.debug("Completed Hindi to English digit conversion")
 
-            result = self._create_user_dict(user_data)
+            result = TextProcessor.create_user_dict(user_data)
             log.info(f"Text formatting completed with {len(result)} entries")
             return result
 

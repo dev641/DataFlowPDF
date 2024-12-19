@@ -1,5 +1,6 @@
 import sys
 import os
+import time
 
 # Add the project root to sys.path
 current_dir = os.path.dirname(
@@ -41,4 +42,12 @@ def start():
 
 
 if __name__ == "__main__":
+    start_time = time.time()
     start()
+
+    end_time = time.time()
+    execution_time = end_time - start_time
+
+    minutes = int(execution_time // 60)
+    seconds = int(execution_time % 60)
+    log.info(f"Total execution time: {minutes} minutes {seconds} seconds")

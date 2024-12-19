@@ -1,3 +1,5 @@
+from multiprocessing import Pool, cpu_count
+from functools import partial
 from .pdf_reader import PdfReader
 from ..image.image_processor import ImageProcessor
 from ..ocr.ocr_processor import OcrProcessor
@@ -32,7 +34,7 @@ class PdfProcessor:
             contour_area=ImageProcess.ContourArea,
             de_noise=ImageProcess.DeNoise,
             kernel=ImageProcess.Kernel,
-            filter2d=ImageProcess.Filter2d,
+            filter2d=ImageProcess.Filter2D,
             threshold=ImageProcess.Threshold,
             morphology=ImageProcess.Morphology,
             erode=ImageProcess.Erode,
@@ -62,10 +64,10 @@ class PdfProcessor:
         )
 
         log.debug("Processing left side text")
-        left_text = self.text_processor.format_text(left_text)
+        left_text = TextProcessor.format_text(left_text)
 
         log.debug("Processing right side text")
-        right_text = self.text_processor.format_text(right_text)
+        right_text = TextProcessor.format_text(right_text)
 
         log.debug("Merging text from both sides")
         text = {**left_text, **right_text}
@@ -98,6 +100,59 @@ class PdfProcessor:
 
         log.info(f"Completed processing {len(roi_images)} ROIs")
         return data
+
+    def _process_single_page(self, args):
+        pdf_path, page_num, config = args
+
+        # Create new instances for each process
+        pdf_reader = PdfReader(pdf_path)
+        image_processor = ImageProcessor(
+            blur=config.Blur,
+            edge_detection=config.EdgeDetection,
+            contours=config.Counters,
+            contour_area=config.ContourArea,
+            de_noise=config.DeNoise,
+            kernel=config.Kernel,
+            filter2d=config.Filter2D,
+            threshold=config.Threshold,
+            morphology=config.Morphology,
+            erode=config.Erode,
+            color=config.Color,
+            color_width=config.Border,
+        )
+
+        # Get PDF object for this process
+        pdf = pdf_reader.process_pdf(lambda x: x)
+        image = pdf_reader.extract_image_from_pdf(pdf=pdf, page_num=page_num)
+        roi_images = image_processor.extract_roi_from_image(image=image)
+        return self.extract_information_from_all_roi(
+            roi_images=roi_images, image_processor=image_processor
+        )
+
+    # def _process_pdf(self, pdf, start_page, pages_to_exclude):
+    #     voter_data = []
+
+    #     if pdf:
+    #         log.info(
+    #             f"Processing pages from {start_page} to {pdf.page_count - pages_to_exclude}"
+    #         )
+
+    #         # Pass pdf_path instead of pdf_reader instance
+    #         page_args = [
+    #             (self.pdf_path, page_num, ImageProcess)
+    #             for page_num in range(
+    #                 start_page, pdf.page_count - pages_to_exclude
+    #             )
+    #         ]
+
+    #         with Pool(processes=cpu_count()) as pool:
+    #             # Use partial to bind self to the method
+    #             bound_process = partial(self._process_single_page)
+    #             voter_data = pool.map(bound_process, page_args)
+
+    #         log.info(f"Successfully processed {len(voter_data)} pages")
+    #         FileSaver.save_data(data=voter_data, file_name="voter_data")
+    #     log.info("Voter data saved successfully")
 
     def _process_pdf(self, pdf, start_page, pages_to_exclude):
         pdf_reader = self.pdf_reader

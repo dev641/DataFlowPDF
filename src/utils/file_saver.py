@@ -14,18 +14,24 @@ class FileSaver:
 
     @staticmethod
     def save_data(data, file_name: str, output_path: Path = PDF_OUTPUT_PATH):
-        log.info(f"Starting data save process for: {file_name}")
-        filename = FileSaver.generate_unique_filename(filename=file_name)
-        log.debug(f"Generated unique filename: {filename}")
+        try:
+            log.info(f"Starting data save process for: {file_name}")
+            filename = FileSaver.generate_unique_filename(filename=file_name)
+            log.debug(f"Generated unique filename: {filename}")
 
-        file_path = output_path / filename
-        log.debug(f"Saving data to path: {file_path}")
+            file_path = output_path / filename
+            log.debug(f"Saving data to path: {file_path}")
+            # Create directory if it doesn't exist
+            Path(file_path).parent.mkdir(parents=True, exist_ok=True)
+            FileSaver.save_to_json(data=data, file_path=f"{file_path}.json")
+            log.info("Data successfully saved to JSON file")
 
-        FileSaver.save_to_json(data=data, file_path=f"{file_path}.json")
-        log.info("Data successfully saved to JSON file")
-
-        FileSaver.save_to_excel(data=data, file_path=f"{file_path}.xlsx")
-        log.info("Data successfully saved to Excel file")
+            FileSaver.save_to_excel(data=data, file_path=f"{file_path}.xlsx")
+            log.info("Data successfully saved to Excel file")
+            return True
+        except Exception as e:
+            log.error(f"Error saving data: {str(e)}")
+            return False
 
     @staticmethod
     def generate_unique_filename(filename: str, prefix: str = "") -> str:

@@ -67,8 +67,13 @@ def hindi_to_english_digits(filePath):
 
             hindi_to_english_digits = load_json(filePath=filePath)
             log.debug(f"Loaded {len(hindi_to_english_digits)} digit mappings")
-
-            data = ''.join(hindi_to_english_digits.get(ch, ch) for ch in data)
+            for row in data:
+                for idx, element in enumerate(row):
+                    # Convert Hindi digits to English digits for each element and update in-place
+                    row[idx] = ''.join(
+                        hindi_to_english_digits.get(ch, ch) for ch in element
+                    )
+            # data = ''.join(hindi_to_english_digits.get(ch, ch) for ch in data)
             log.debug("Digit conversion completed")
 
             return func(data, *args, **kwargs)
@@ -85,7 +90,7 @@ def clean_empty_lines(func):
         log.debug(
             f"Starting empty line cleaning for data: {data[:100]}..."
         )  # Log first 100 chars
-        data = [line.strip() for line in data.split("\n") if line.strip()]
+        data = [line.strip() for line in data if line.strip()]
         log.debug(f"Cleaned {len(data)} non-empty lines")
         return func("\n".join(data), *args, **kwargs)
 

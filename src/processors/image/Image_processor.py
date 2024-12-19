@@ -23,7 +23,7 @@ class ImageProcessor:
         contour_area=ImageProcess.ContourArea,
         de_noise=ImageProcess.DeNoise,
         kernel=ImageProcess.Kernel,
-        filter2d=ImageProcess.Filter2d,
+        filter2d=ImageProcess.Filter2D,
         threshold=ImageProcess.Threshold,
         morphology=ImageProcess.Morphology,
         erode=ImageProcess.Erode,
@@ -343,12 +343,14 @@ class ImageProcessor:
             image=image,
             type=ImageType.PASSPORT,
             contours=contours,
-            min_area_threshold=passport_area * contour_area.MAX_AREA_RATIO,
+            min_area_threshold=passport_area * contour_area.MIN_AREA_RATIO,
             max_area_threshold=passport_area * contour_area.MAX_AREA_RATIO,
             min_aspect_ratio=contour_area.MIN_ASPECT_RATIO,
             max_aspect_ratio=contour_area.MAX_ASPECT_RATIO,
-            position_threshold=contour_area.POSITION_THRESHOLD,
-            size_threshold=contour_area.SIZE_THRESHOLD,
+            position_threshold=getattr(
+                contour_area, 'POSITION_THRESHOLD', 500
+            ),
+            size_threshold=getattr(contour_area, 'SIZE_THRESHOLD', 500),
             color=color,
             color_width=color_width,
             ext=ext,
@@ -390,7 +392,7 @@ class ImageProcessor:
         log.info("Successfully split ROI into sides")
         return left_side, right_side
 
-    def image_to_base64(image, ext=ImageExtensions.PNG.get_extension()):
+    def image_to_base64(self, image, ext=ImageExtensions.PNG.get_extension()):
         """
         Converts an image to a base64-encoded string.
 
@@ -409,12 +411,12 @@ class ImageProcessor:
 
             log.debug(f"Encoding image with extension: {ext}")
             # Encode the image to memory buffer as specified format (e.g., PNG)
-            _, buffer = cv.imencode(ext=ext, img=image)
+            # _, buffer = cv.imencode(ext=ext, img=image)
 
             # Convert the image buffer to base64
-            base64_str = base64.b64encode(buffer).decode('utf-8')
+            base64_str = base64.b64encode(image).decode('utf-8')
             log.info("Successfully converted image to base64")
-            return base64_str
+            return f"data:image/{ext};base64,{base64_str}"
 
         except FileNotFoundError as e:
             log.error(f"File not found error: {e}")
@@ -473,7 +475,7 @@ class ImageProcessor:
             # load config
             log.debug("Loading configuration parameters")
             blur = self.blur.ImageRoi
-            edge_detection = self.edge_detection.ImageRoi
+            # edge_detection = self.edge_detection.ImageRoi
             contours = self.contours.ImageRoi
             contour_area = self.contour_area.ImageRoi
             de_noise = self.de_noise.ProcessRoi
@@ -490,17 +492,12 @@ class ImageProcessor:
             processed_image = self._process_image(
                 image=image,
                 blur=blur,
-                edge_detection=edge_detection,
-                contours=contours,
-                contour_area=contour_area,
                 de_noise=de_noise,
                 kernel=kernel,
                 filter2d=filter2d,
                 threshold=threshold,
                 morphology=morphology,
                 erode=erode,
-                color=color,
-                color_width=color_width,
                 type=type,
             )
 

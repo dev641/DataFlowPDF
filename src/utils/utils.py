@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from src.enums.enums import FileNamePart
 from src.utils.logger import setup_logger
 
@@ -47,3 +48,18 @@ def get_filename_part(pathname: str, part: FileNamePart = FileNamePart.FULL):
     except Exception as e:
         log.error(f"Unexpected error: {e}")
         return None
+
+
+def make_dir(path: Path):
+    """
+    Creates a directory if it doesn't already exist.
+    """
+    log.info(f"Creating directory: {path}")
+    try:
+        if not os.path.exists(path):
+            os.makedirs(path)
+            log.info(f"Directory created: {path}")
+        else:
+            log.info(f"Directory already exists: {path}")
+    except Exception as e:
+        log.error(f"Error creating directory: {e}")

@@ -649,3 +649,1326 @@
 2024-12-16 00:48:10,468 - src.processors.pdf.pdf_processor - INFO - Starting voter information extraction from PDF: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\data\pdfs\2024-FC-EROLLGEN-S04-196-FinalRoll-Revision5-HIN-1.pdf
 2024-12-16 00:48:10,468 - src.processors.pdf.pdf_reader - INFO - Starting to read PDF file: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\data\pdfs\2024-FC-EROLLGEN-S04-196-FinalRoll-Revision5-HIN-1.pdf
 2024-12-16 00:48:10,523 - src.processors.pdf.pdf_reader - INFO - Successfully opened PDF with 37 pages
+2024-12-16 01:14:32,447 - src.decorator.decorator - INFO - Initializing Hindi to English digit conversion with file: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\config\config_files\hin_eng_digits.json
+2024-12-16 01:14:32,447 - src.decorator.decorator - INFO - Initializing pattern formatting with pattern: GenderAgePAttern.PATTERN
+2024-12-16 01:14:32,447 - src.decorator.decorator - INFO - Initializing misspelled word correction with file: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\config\config_files\ocr_corrections.json
+2024-12-16 01:14:32,447 - __main__ - INFO - Starting PDF processing application
+2024-12-16 01:14:32,447 - src.enums.enum_factory - INFO - Starting enum code generation from directory: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\config\config_files
+2024-12-16 01:14:32,456 - src.utils.utils - INFO - Extracting filename part: FileNamePart.WITHOUT_EXTENSION from C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\config\config_files\image_process.yml
+2024-12-16 01:14:32,456 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,456 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,462 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,462 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,464 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,464 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ImageProcess
+2024-12-16 01:14:32,464 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,464 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,464 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,464 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,465 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,465 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Counters
+2024-12-16 01:14:32,465 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,465 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,465 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,465 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,465 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,466 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ImageRoi
+2024-12-16 01:14:32,466 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,466 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,466 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,466 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,466 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,467 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,468 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,469 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,470 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,470 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,471 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,471 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,472 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,472 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,472 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ImageRoi
+2024-12-16 01:14:32,473 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,473 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,474 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,474 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,475 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,475 - src.enums.enum_factory - INFO - Processing nested dictionary for class: PassportBox
+2024-12-16 01:14:32,475 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,476 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,477 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,477 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,477 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,477 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,478 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,478 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,479 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,480 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,480 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,480 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,480 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,481 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,481 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:14:32,481 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:14:32,481 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,481 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,481 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,481 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,481 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,485 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Blur
+2024-12-16 01:14:32,485 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,485 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,485 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,486 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,486 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,486 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ImageRoi
+2024-12-16 01:14:32,486 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,488 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,489 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,489 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,490 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,491 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,491 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,491 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,491 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,493 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,493 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,493 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,493 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,495 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,496 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ImageRoi
+2024-12-16 01:14:32,496 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,496 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,497 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,497 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,498 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,498 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:14:32,499 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,499 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,499 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,500 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,500 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,501 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,501 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,501 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,501 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,502 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,502 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,502 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,503 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,503 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,503 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,503 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,504 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,505 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,505 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,506 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,506 - src.enums.enum_factory - INFO - Processing nested dictionary for class: PassportBox
+2024-12-16 01:14:32,506 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,506 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,507 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,507 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,508 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,508 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,509 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,509 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,509 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,510 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,510 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,510 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,510 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,510 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,510 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:14:32,510 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:14:32,510 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,510 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,510 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,510 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,510 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,510 - src.enums.enum_factory - INFO - Processing nested dictionary for class: DeNoise
+2024-12-16 01:14:32,510 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,510 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,515 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,515 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,515 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,515 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:14:32,516 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,516 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,516 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,516 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,516 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,517 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,517 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,517 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,517 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,517 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,517 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,517 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,518 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,518 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,518 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,518 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,518 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,518 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,518 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,519 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,519 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,519 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,519 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,520 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,520 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,520 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,520 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,521 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,522 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Kernel
+2024-12-16 01:14:32,522 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,522 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,522 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,522 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,523 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,523 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:14:32,523 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,523 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,523 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,523 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,523 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,523 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,523 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,524 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,524 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,524 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,524 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,524 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,524 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,524 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,524 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Filter2D
+2024-12-16 01:14:32,525 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,525 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,525 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,525 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,525 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,525 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:14:32,525 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,525 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,525 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,526 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,526 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,526 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,526 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,526 - src.enums.enum_factory - INFO - Processing nested dictionary for class: EdgeDetection
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,526 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ImageRoi
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,526 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Canny
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,526 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,530 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,531 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,531 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,531 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,531 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,531 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,531 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,531 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,531 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,531 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Canny
+2024-12-16 01:14:32,531 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Canny
+2024-12-16 01:14:32,532 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,532 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,532 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,532 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,532 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,532 - src.enums.enum_factory - INFO - Processing nested dictionary for class: PassportBox
+2024-12-16 01:14:32,532 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,532 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,532 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,533 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,533 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,533 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Canny
+2024-12-16 01:14:32,533 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,533 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,533 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,533 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,533 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,534 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,534 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,535 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,535 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,535 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,535 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,536 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,536 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,536 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,536 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Canny
+2024-12-16 01:14:32,536 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Canny
+2024-12-16 01:14:32,537 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,537 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ContourArea
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,537 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ImageRoi
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,537 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,537 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,540 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,540 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,540 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,540 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,540 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,540 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,540 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,540 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,540 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,541 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,541 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,541 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,541 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,541 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,541 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,541 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,541 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,542 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,542 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,542 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,542 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,542 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,542 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,542 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,542 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,542 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,542 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,543 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,543 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,543 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,543 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,543 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,543 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,543 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,543 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,544 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,544 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ImageRoi
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,544 - src.enums.enum_factory - INFO - Processing nested dictionary for class: PassportBox
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,544 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,544 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,544 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,544 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,544 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,544 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,544 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,544 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,550 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,550 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:14:32,550 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:14:32,550 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,550 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,550 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,550 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,550 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,550 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Threshold
+2024-12-16 01:14:32,551 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,551 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,551 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,551 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,551 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,551 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:14:32,551 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,551 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,552 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,552 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,552 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,552 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,553 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,553 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,553 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,553 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,554 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,554 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,555 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,555 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,555 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,555 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,555 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,556 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,556 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,556 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,556 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,556 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Morphology
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,556 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,556 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,556 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,556 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,560 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,561 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,561 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,561 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,561 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,562 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,562 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,562 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,562 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,562 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,562 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,563 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,563 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,563 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Erode
+2024-12-16 01:14:32,563 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,563 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,563 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,564 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,564 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,564 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:14:32,564 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,564 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,564 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,564 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,564 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,565 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,565 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,565 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,565 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:14:32,565 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,565 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,565 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,565 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,565 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,566 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Color
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,566 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,566 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,566 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,566 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,566 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,566 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,566 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,569 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Color
+2024-12-16 01:14:32,569 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,569 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,570 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,571 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,571 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,571 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Border
+2024-12-16 01:14:32,571 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,572 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,572 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,572 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,572 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,572 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,572 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,572 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Border
+2024-12-16 01:14:32,573 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Border
+2024-12-16 01:14:32,574 - src.utils.utils - INFO - Extracting filename part: FileNamePart.WITHOUT_EXTENSION from C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\config\config_files\ocr_process.yml
+2024-12-16 01:14:32,575 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,576 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,576 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,576 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,576 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,576 - src.enums.enum_factory - INFO - Processing nested dictionary for class: OcrProcess
+2024-12-16 01:14:32,576 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,577 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,577 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,577 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,577 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,577 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,577 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,577 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,577 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,578 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,578 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,578 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,578 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Pytesseract
+2024-12-16 01:14:32,578 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,578 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,578 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,578 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,578 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,579 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Config
+2024-12-16 01:14:32,579 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,579 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,579 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,579 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,579 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,579 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,579 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,579 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,579 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,580 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,580 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,580 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,581 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,581 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,581 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,581 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,581 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,581 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,581 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,581 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,582 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,582 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,582 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,582 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,582 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,582 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,582 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,583 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,583 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,583 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,583 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,583 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,583 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,584 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,584 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,584 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,584 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,584 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,584 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,584 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,584 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,585 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,585 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Config
+2024-12-16 01:14:32,586 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,586 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,586 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,587 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,587 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,587 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Lang
+2024-12-16 01:14:32,587 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,588 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,588 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,588 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,588 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,588 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,589 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,589 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,589 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,589 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,590 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,590 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,590 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,590 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,590 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,591 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,592 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,593 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,593 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,593 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,593 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,593 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,593 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,594 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,594 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,594 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,594 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,594 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,594 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Lang
+2024-12-16 01:14:32,594 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Lang
+2024-12-16 01:14:32,594 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,594 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,594 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,595 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,595 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,595 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Easyocr
+2024-12-16 01:14:32,595 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:14:32,595 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:14:32,595 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,595 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,595 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:14:32,595 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Lang
+2024-12-16 01:14:32,596 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,596 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,596 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,596 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,596 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,596 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,596 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,597 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,597 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,597 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,597 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:14:32,597 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:14:32,597 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:14:32,597 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:14:32,597 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Lang
+2024-12-16 01:14:32,597 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Lang
+2024-12-16 01:14:32,597 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Easyocr
+2024-12-16 01:14:32,597 - src.enums.enum_factory - INFO - Writing generated enum code to: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\config\config_files\config.py
+2024-12-16 01:14:32,597 - src.enums.enum_factory - INFO - Enum code generation completed successfully
+2024-12-16 01:14:32,597 - __main__ - INFO - Configuration loaded successfully
+2024-12-16 01:14:32,597 - __main__ - INFO - Scanning directory C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\data\pdfs for PDF files
+2024-12-16 01:14:32,597 - src.processors.pdf.pdf_processor - INFO - Initializing PDF processor for: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\data\pdfs\2024-FC-EROLLGEN-S04-196-FinalRoll-Revision5-HIN-1.pdf
+2024-12-16 01:14:32,602 - src.processors.ocr.ocr_processor - INFO - Initializing OCR processor with engine: OcrEngine.PYTESSERACT
+2024-12-16 01:14:32,602 - src.processors.ocr.ocr_processor - INFO - OCR processor initialization completed
+2024-12-16 01:15:10,683 - src.decorator.decorator - INFO - Initializing Hindi to English digit conversion with file: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\config\config_files\hin_eng_digits.json
+2024-12-16 01:15:10,699 - src.decorator.decorator - INFO - Initializing pattern formatting with pattern: GenderAgePAttern.PATTERN
+2024-12-16 01:15:10,699 - src.decorator.decorator - INFO - Initializing misspelled word correction with file: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\config\config_files\ocr_corrections.json
+2024-12-16 01:15:10,703 - __main__ - INFO - Starting PDF processing application
+2024-12-16 01:15:10,703 - src.enums.enum_factory - INFO - Starting enum code generation from directory: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\config\config_files
+2024-12-16 01:15:10,711 - src.utils.utils - INFO - Extracting filename part: FileNamePart.WITHOUT_EXTENSION from C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\config\config_files\image_process.yml
+2024-12-16 01:15:10,711 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,713 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,713 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,714 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,714 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,715 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ImageProcess
+2024-12-16 01:15:10,715 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,715 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,716 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,717 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,717 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,717 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Counters
+2024-12-16 01:15:10,717 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,718 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,718 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,718 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,718 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,718 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ImageRoi
+2024-12-16 01:15:10,720 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,720 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,720 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,721 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,721 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,721 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,722 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,722 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,722 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,723 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,723 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,723 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,724 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,724 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,725 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ImageRoi
+2024-12-16 01:15:10,725 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,725 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,726 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,726 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,727 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,727 - src.enums.enum_factory - INFO - Processing nested dictionary for class: PassportBox
+2024-12-16 01:15:10,728 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,728 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,728 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,729 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,729 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,729 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,729 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,729 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,729 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,729 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,729 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,729 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,729 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,729 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,729 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:15:10,729 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:15:10,733 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,734 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,734 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,735 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,736 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,736 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Blur
+2024-12-16 01:15:10,737 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,737 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,737 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,737 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,738 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,738 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ImageRoi
+2024-12-16 01:15:10,738 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,739 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,739 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,739 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,739 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,739 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,739 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,739 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,739 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,739 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,743 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,743 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,743 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,744 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,744 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ImageRoi
+2024-12-16 01:15:10,744 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,744 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,745 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,745 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,745 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,746 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:15:10,746 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,746 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,746 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,746 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,746 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,746 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,746 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,747 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,747 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,747 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,747 - src.enums.enum_factory - INFO - Processing nested dictionary for class: PassportBox
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,747 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,747 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,747 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,747 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,747 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:15:10,747 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:15:10,747 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,752 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,752 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,754 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,754 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,754 - src.enums.enum_factory - INFO - Processing nested dictionary for class: DeNoise
+2024-12-16 01:15:10,754 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,755 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,755 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,755 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,755 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,755 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:15:10,755 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,755 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,756 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,756 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,756 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,756 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,756 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,756 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,756 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,756 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,756 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,757 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,757 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,757 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,757 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,757 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,757 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,757 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,757 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,758 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,758 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,758 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,758 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,758 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,758 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,758 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,758 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,758 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,759 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Kernel
+2024-12-16 01:15:10,759 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,759 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,759 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,759 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,761 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,761 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:15:10,761 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,761 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,761 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,761 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,762 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,762 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,762 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,762 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,762 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,763 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,763 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,763 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,763 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,763 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,763 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Filter2D
+2024-12-16 01:15:10,763 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,764 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,764 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,764 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,764 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,764 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:15:10,764 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,764 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,765 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,765 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,765 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,765 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,765 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,765 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,765 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,765 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,766 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,766 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,766 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,766 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,766 - src.enums.enum_factory - INFO - Processing nested dictionary for class: EdgeDetection
+2024-12-16 01:15:10,766 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,766 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,766 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,766 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,766 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,766 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ImageRoi
+2024-12-16 01:15:10,766 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,768 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,768 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,768 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,768 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,769 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Canny
+2024-12-16 01:15:10,770 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,771 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,771 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,771 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,771 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,772 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,772 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,772 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,772 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,772 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,772 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,772 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,773 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,773 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,773 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Canny
+2024-12-16 01:15:10,773 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Canny
+2024-12-16 01:15:10,773 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,773 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,773 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,774 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,774 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,774 - src.enums.enum_factory - INFO - Processing nested dictionary for class: PassportBox
+2024-12-16 01:15:10,774 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,774 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,774 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,774 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,775 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Canny
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,775 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,775 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,775 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,775 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,775 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Canny
+2024-12-16 01:15:10,775 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Canny
+2024-12-16 01:15:10,775 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,775 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ContourArea
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,775 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ImageRoi
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,775 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,780 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,780 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,780 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,780 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,780 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,780 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,780 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,780 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,780 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,781 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,781 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,781 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,781 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,781 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,781 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,781 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,781 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,781 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,782 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,782 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,782 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,782 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,782 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,782 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,782 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,782 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,782 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,783 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,783 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,783 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,783 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,783 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,783 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,783 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,783 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,784 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,784 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,784 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,784 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,784 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,784 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ImageRoi
+2024-12-16 01:15:10,787 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,787 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,787 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,787 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,787 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,787 - src.enums.enum_factory - INFO - Processing nested dictionary for class: PassportBox
+2024-12-16 01:15:10,787 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,787 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,787 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,787 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,787 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,787 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,787 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,787 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,790 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,790 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,790 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,790 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,790 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,790 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,790 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,790 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,791 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,791 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,791 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,791 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,791 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,791 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,791 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,791 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,792 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,792 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,792 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,792 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,792 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:15:10,792 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: PassportBox
+2024-12-16 01:15:10,792 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,792 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,792 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,793 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,793 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,793 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Threshold
+2024-12-16 01:15:10,793 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,793 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,793 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,793 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,794 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,794 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,794 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,794 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,794 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,794 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,794 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,794 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,794 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,794 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Morphology
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,794 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,794 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,800 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,800 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,800 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,800 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,800 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,801 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,801 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,801 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,802 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,802 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,802 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,802 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,803 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,803 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,804 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,804 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,804 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,805 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Erode
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,805 - src.enums.enum_factory - INFO - Processing nested dictionary for class: ProcessRoi
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,805 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,805 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,805 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,805 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: ProcessRoi
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,805 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Color
+2024-12-16 01:15:10,805 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,810 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,810 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,810 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,810 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,810 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,810 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,810 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,811 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,811 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,811 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,811 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,812 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,812 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,812 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,812 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,812 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,812 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,813 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,813 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,813 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,813 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Color
+2024-12-16 01:15:10,813 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,813 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,813 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,813 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,813 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,814 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Border
+2024-12-16 01:15:10,814 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,814 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,814 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,814 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,814 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,814 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,814 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,814 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Border
+2024-12-16 01:15:10,814 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Border
+2024-12-16 01:15:10,814 - src.utils.utils - INFO - Extracting filename part: FileNamePart.WITHOUT_EXTENSION from C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\config\config_files\ocr_process.yml
+2024-12-16 01:15:10,814 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,818 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,818 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,818 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,818 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,818 - src.enums.enum_factory - INFO - Processing nested dictionary for class: OcrProcess
+2024-12-16 01:15:10,818 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,819 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,819 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,820 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,821 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,821 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,821 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,821 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,821 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,821 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,821 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,821 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,821 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Pytesseract
+2024-12-16 01:15:10,822 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,822 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,822 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,822 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,822 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,822 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Config
+2024-12-16 01:15:10,822 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,823 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,823 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,823 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,823 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,823 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,823 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,823 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,823 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,823 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,823 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Config
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Lang
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,824 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,824 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,830 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,830 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,830 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,830 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,830 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,830 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,830 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,830 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,830 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,830 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,831 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,831 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,831 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,831 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,831 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,831 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,831 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,831 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,831 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Lang
+2024-12-16 01:15:10,832 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Lang
+2024-12-16 01:15:10,832 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,832 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,832 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,832 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,832 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,832 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Easyocr
+2024-12-16 01:15:10,832 - src.processors.text.case_converter - INFO - Converting string to CaseType.PASCAL_CASE
+2024-12-16 01:15:10,832 - src.processors.text.case_converter - INFO - Converting string to PascalCase
+2024-12-16 01:15:10,832 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,833 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,833 - src.processors.text.case_converter - INFO - Successfully converted to PascalCase
+2024-12-16 01:15:10,833 - src.enums.enum_factory - INFO - Processing nested dictionary for class: Lang
+2024-12-16 01:15:10,833 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,833 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,833 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,833 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,833 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,833 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,834 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,834 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,834 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,834 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,835 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,835 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,835 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,835 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,836 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,836 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,836 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,837 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,837 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,837 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,837 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,837 - src.processors.text.case_converter - INFO - Converting string to CaseType.UPPERCASE_SNAKE_CASE
+2024-12-16 01:15:10,837 - src.processors.text.case_converter - INFO - Converting string to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,837 - src.processors.text.case_converter - INFO - Starting string normalization
+2024-12-16 01:15:10,837 - src.processors.text.case_converter - INFO - String normalization completed
+2024-12-16 01:15:10,837 - src.processors.text.case_converter - INFO - Successfully converted to UPPER_SNAKE_CASE
+2024-12-16 01:15:10,837 - src.enums.enum_factory - INFO - Starting enum value formatting
+2024-12-16 01:15:10,837 - src.enums.enum_factory - INFO - Enum value formatting completed
+2024-12-16 01:15:10,840 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Lang
+2024-12-16 01:15:10,840 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Lang
+2024-12-16 01:15:10,840 - src.enums.enum_factory - INFO - Completed nested dictionary processing for: Easyocr
+2024-12-16 01:15:10,840 - src.enums.enum_factory - INFO - Writing generated enum code to: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\config\config_files\config.py
+2024-12-16 01:15:10,840 - src.enums.enum_factory - INFO - Enum code generation completed successfully
+2024-12-16 01:15:10,841 - __main__ - INFO - Configuration loaded successfully
+2024-12-16 01:15:10,841 - __main__ - INFO - Scanning directory C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\data\pdfs for PDF files
+2024-12-16 01:15:10,841 - src.processors.pdf.pdf_processor - INFO - Initializing PDF processor for: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\data\pdfs\2024-FC-EROLLGEN-S04-196-FinalRoll-Revision5-HIN-1.pdf
+2024-12-16 01:15:10,841 - src.processors.ocr.ocr_processor - INFO - Initializing OCR processor with engine: OcrEngine.PYTESSERACT
+2024-12-16 01:15:10,841 - src.processors.ocr.ocr_processor - INFO - OCR processor initialization completed
+2024-12-16 01:15:10,841 - src.processors.pdf.pdf_processor - INFO - PDF processor initialization completed
+2024-12-16 01:15:10,843 - src.processors.pdf.pdf_processor - INFO - Starting voter information extraction from PDF: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\data\pdfs\2024-FC-EROLLGEN-S04-196-FinalRoll-Revision5-HIN-1.pdf
+2024-12-16 01:15:10,843 - src.processors.pdf.pdf_reader - INFO - Starting to read PDF file: C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\data\pdfs\2024-FC-EROLLGEN-S04-196-FinalRoll-Revision5-HIN-1.pdf
+2024-12-16 01:15:10,845 - src.processors.pdf.pdf_reader - INFO - Successfully opened PDF with 37 pages
+2024-12-16 01:15:10,845 - src.processors.pdf.pdf_processor - INFO - Processing pages from 3 to 35
+2024-12-16 01:15:10,845 - src.processors.pdf.pdf_reader - INFO - Starting image extraction from page 3
+2024-12-16 01:15:10,845 - src.processors.pdf.pdf_reader - INFO - Getting page 3 from PDF
+2024-12-16 01:15:10,849 - src.processors.pdf.pdf_reader - INFO - Successfully retrieved page 3
+2024-12-16 01:15:11,428 - src.processors.pdf.pdf_reader - INFO - Successfully extracted image from PDF
+2024-12-16 01:15:11,486 - src.processors.image.image_processor - INFO - Starting ROI extraction process
+2024-12-16 01:15:11,486 - src.processors.image.image_processor - INFO - Starting contour detection process
+2024-12-16 01:15:11,735 - src.processors.image.image_processor - INFO - Found 1273 contours
+2024-12-16 01:15:52,208 - src.processors.image.image_processor - INFO - Starting image extraction for type: ImageType.ROI_IMAGE
+2024-12-16 01:15:52,227 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,228 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,229 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,231 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,232 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,234 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,234 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,234 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,235 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,237 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,239 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,242 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,242 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,243 - src.processors.image.image_processor - INFO - Duplicate coordinates found
+2024-12-16 01:15:52,254 - src.processors.image.image_processor - INFO - Extracted 30 ROI images
+2024-12-16 01:15:52,255 - src.processors.image.image_processor - INFO - Successfully extracted 30 ROI images
+2024-12-16 01:15:52,256 - src.processors.pdf.pdf_processor - INFO - Starting information extraction from ROIs
+2024-12-16 01:15:52,256 - src.processors.pdf.pdf_processor - INFO - Starting ROI text extraction process
+2024-12-16 01:15:52,257 - src.processors.image.image_processor - INFO - Starting image processing
+2024-12-16 01:15:52,257 - src.processors.image.image_processor - ERROR - Unexpected error in image processing: ImageProcessor._process_image() got an unexpected keyword argument 'edge_detection'
+2024-12-16 01:15:52,259 - src.processors.image.image_processor - INFO - Starting ROI splitting process
+2024-12-16 01:15:52,259 - src.processors.pdf.pdf_reader - ERROR - Error reading PDF file C:\Users\Devas\Personal-Development\Projects\DataFlowPDF\data\pdfs\2024-FC-EROLLGEN-S04-196-FinalRoll-Revision5-HIN-1.pdf: 'tuple' object has no attribute 'shape'
