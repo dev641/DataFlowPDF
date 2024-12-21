@@ -22,9 +22,10 @@ PDF_PATH = PDF_DIR / "2024-FC-EROLLGEN-S04-196-FinalRoll-Revision5-HIN-1.pdf"
 
 # Pattern Settings
 VOTER_ID_PATTERN = r"\b([A-Z]{2}/\d{2}/\d{3}/\d{6})|([A-Z]{3}\d{7})\b"
-GENDER_AGE_PATTERN = r"(उम्र)\s*:?\s*(\d+)\s*(लिंग)"
-GENDER_AGE_PATTERN_REPLACEMENT = r"\1:\2\n\3"
-
+GENDER_AGE_PATTERN = r"(उम्र)\s*:*\s*(\d+)\s*([^\s]+)\s*:*\s*:*\s*(\S+)|([^\s]+)\s*:*\s*(\d+)\s*(लिंग)\s*:*\s*:*\s*(\S+)"
+# GENDER_AGE_PATTERN_REPLACEMENT = r"\1:\2\nलिंग:\4"
+VOTER_NAME_FIELD_DETECT_PATTERN = r'^(.+)\s+का\s+(.+)$'
+MAKAN_NUMBER_FIELD_DETECT_PATTERN = r'^(?:.*?मकान.*?|.*?संख्या.*?)$'
 
 # Image Settings
 IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png"]

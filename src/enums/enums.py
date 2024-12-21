@@ -1,7 +1,7 @@
 from enum import Enum
 from config.settings import (
-    GENDER_AGE_PATTERN,
-    GENDER_AGE_PATTERN_REPLACEMENT,
+    # GENDER_AGE_PATTERN,
+    # GENDER_AGE_PATTERN_REPLACEMENT,
     IMAGE_EXTENSIONS,
 )
 
@@ -39,9 +39,9 @@ class ImageType(Enum):
     PASSPORT = "passport"
 
 
-class GenderAgePAttern(Enum):
-    PATTERN = GENDER_AGE_PATTERN
-    REPLACEMENT = GENDER_AGE_PATTERN_REPLACEMENT
+# class GenderAgePAttern(Enum):
+#     PATTERN = GENDER_AGE_PATTERN
+#     REPLACEMENT = GENDER_AGE_PATTERN_REPLACEMENT
 
 
 class ImageExtensions(Enum):

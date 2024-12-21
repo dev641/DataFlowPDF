@@ -12,6 +12,7 @@
     "IMREAD",
     "ksize",
     "levelname",
+    "makan",
     "maxval",
     "pdfs",
     "pixmap",
@@ -20,7 +21,13 @@
     "readtext",
     "Tesseract",
     "tobytes",
-    "मकान"
+    "उम्र",
+    "निर्वाचक",
+    "पत्नी",
+    "पिता",
+    "मकान",
+    "माता",
+    "संख्या"
   ],
   "editor.formatOnSave": true,
   // "python.formatting.provider": "black"

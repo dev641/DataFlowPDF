@@ -71,7 +71,8 @@ class PdfProcessor:
 
         log.debug("Merging text from both sides")
         text = {**left_text, **right_text}
-
+        log.debug("Standardizing field names")
+        text = TextProcessor.standardize_field_name(user_dict=text)
         log.info("Successfully completed ROI text extraction")
         return text
 

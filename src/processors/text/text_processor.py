@@ -1,18 +1,17 @@
-from config.config_loader import load_json
-from src.decorator.decorator import (
+import re
+from src.processors.text.decorator import (
     correct_misspelled_word,
     hindi_to_english_digits,
-    format_pattern,
+    format_gender_age,
     normalize_text,
     clean_empty_lines,
+    standardize_name_fields,
 )
 from config.settings import (
     VOTER_ID_PATTERN,
     OCR_CORRECTIONS_PATH,
     HIN_ENG_DIGITS_PATH,
 )
-from src.enums.enums import GenderAgePAttern
-import re
 from src.utils.logger import setup_logger
 
 log = setup_logger(__name__)
@@ -74,7 +73,7 @@ class TextProcessor:
         return user_data
 
     @staticmethod
-    def create_user_dict(user_data):
+    def _create_user_dict(user_data):
         log.info("Starting user dictionary creation")
         log.debug(f"Processing {len(user_data)} user data items")
 
@@ -89,11 +88,13 @@ class TextProcessor:
         return user_dict
 
     @staticmethod
+    @standardize_name_fields
+    def standardize_field_name(user_dict):
+        return user_dict
+
+    @staticmethod
     @correct_misspelled_word(filePath=OCR_CORRECTIONS_PATH)
-    @format_pattern(
-        pattern=GenderAgePAttern.PATTERN.value,
-        replacement=GenderAgePAttern.REPLACEMENT.value,
-    )
+    @format_gender_age
     @normalize_text
     @clean_empty_lines
     def format_text(roi_data):
@@ -110,7 +111,7 @@ class TextProcessor:
             user_data = TextProcessor._convert_digits_in_user_data(user_data)
             log.debug("Completed Hindi to English digit conversion")
 
-            result = TextProcessor.create_user_dict(user_data)
+            result = TextProcessor._create_user_dict(user_data)
             log.info(f"Text formatting completed with {len(result)} entries")
             return result
 
