@@ -61,3 +61,7 @@ class ImageExtensions(Enum):
 
     def get_extension(self, with_period: bool = True) -> str:
         return self.value if with_period else self.value.lstrip('.')
+
+
+class ServiceName(Enum):
+    DATABASE = "MSSQL$SQLEXPRESS"

@@ -16,14 +16,16 @@ from config.config_loader import load_enums
 
 from src.processors.pdf.pdf_processor import PdfProcessor
 from src.utils.logger import setup_logger
+from src.decorator.system_service import start_service
+from src.enums.enums import ServiceName
 
 # Initialize logger
 log = setup_logger(__name__)
 
 
+@start_service(service_name=ServiceName.DATABASE.value)
 def start():
     log.info("Starting PDF processing application")
-
     # Load the configuration
     log.debug("Loading configuration from %s", CONFIG_FILES_DIR)
     config = load_enums(config_dir=CONFIG_FILES_DIR)
