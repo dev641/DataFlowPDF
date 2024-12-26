@@ -19,6 +19,7 @@
     "pycache",
     "PYTESSERACT",
     "readtext",
+    "sessionmaker",
     "Tesseract",
     "tobytes",
     "उम्र",

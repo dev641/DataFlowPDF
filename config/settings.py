@@ -1,6 +1,7 @@
 from pathlib import Path
 import sys
 from enum import Enum
+from sqlalchemy.pool import QueuePool
 
 # All Project Directories
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +31,6 @@ MAKAN_NUMBER_FIELD_DETECT_PATTERN = r'^(?:.*?मकान.*?|.*?संख्य�
 # Image Settings
 IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png"]
 
-
 NUM_SECTION = 2
 
 # PDF Settings
@@ -38,3 +38,20 @@ IMAGE_DPI = 900
 IMAGE_MODE = "RGB"
 START_PAGE = 3
 PAGE_TO_EXCLUDE = 2
+
+
+# Database Settings
+SERVER = "localhost"
+INSTANCE = "SQLEXPRESS"
+DATABASE = "voter_db"  # Assuming a single database value
+DRIVER = "ODBC Driver 17 for SQL Server"
+# Database Connection
+POOL_CLASS = QueuePool
+POOL_SIZE = 10  # Adjust based on expected concurrency
+MAX_OVERFLOW = 20  # Extra connections beyond pool_size
+POOL_TIMEOUT = 30
+POOL_RECYCLE = 3600
+POOL_PRE_PING = True
+
+# Database Insert Batch Size
+DATABASE_INSERT_BATCH_SIZE = 500
