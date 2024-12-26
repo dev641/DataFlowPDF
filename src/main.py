@@ -1,6 +1,7 @@
 import sys
 import os
 import time
+import multiprocessing
 
 # Add the project root to sys.path
 current_dir = os.path.dirname(
@@ -10,7 +11,12 @@ project_root = os.path.abspath(os.path.join(current_dir, ".."))  # One level up
 sys.path.append(project_root)
 
 # Now you can import config
-from config.settings import CONFIG_FILES_DIR, PDF_DIR, PDF_PATH
+from config.settings import (
+    CONFIG_FILES_DIR,
+    PDF_DIR,
+    PDF_PATH,
+    PDF_PROCESS_CONTROL,
+)
 
 from config.config_loader import load_enums
 
@@ -21,6 +27,14 @@ from src.enums.enums import ServiceName
 
 # Initialize logger
 log = setup_logger(__name__)
+
+
+def process_pdf(pdf_path):
+    # Create a PdfProcessor instance
+    pdf_processor = PdfProcessor(pdf_path=pdf_path)
+    log.debug(f"PDF processor initialized for {pdf_path}")
+    pdf_processor.save_voter_information_from_pdf()
+    log.info(f"PDF processing completed for {pdf_path}")
 
 
 @start_service(service_name=ServiceName.DATABASE.value)
@@ -37,10 +51,16 @@ def start():
     #     log.info("Processing PDF file: %s", pdf_path)
     #     pdf_processor = PdfProcessor(pdf_path=pdf_path)
     #     log.debug("PDF processor initialized for %s", pdf_path)
+    pdf_paths = list(PDF_DIR.glob("*.pdf"))
+    log.info("Found %s PDF files in %s", len(pdf_paths), PDF_DIR)
 
-    pdf_processor = PdfProcessor(pdf_path=PDF_PATH)
-    log.debug("PDF processor initialized for %s", PDF_PATH)
-    pdf_processor.save_voter_information_from_pdf()
+    num_processes = min(
+        PDF_PROCESS_CONTROL, multiprocessing.cpu_count(), len(pdf_paths)
+    )
+
+    log.info("Starting PDF processing with %s processes", num_processes)
+    with multiprocessing.Pool(processes=num_processes) as pool:
+        pool.map(process_pdf, pdf_paths)
 
 
 if __name__ == "__main__":

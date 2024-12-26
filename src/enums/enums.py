@@ -37,6 +37,7 @@ class ImageType(Enum):
     MASK_IMAGE = "mask_image"
     ORIGINAL_IMAGE = "original_image"
     PASSPORT = "passport"
+    BINARY_IMAGE = "binary_image"
 
 
 # class GenderAgePAttern(Enum):

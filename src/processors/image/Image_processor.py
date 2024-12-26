@@ -364,7 +364,7 @@ class ImageProcessor:
 
             if is_success:
                 log.debug("Converting passport photo to base64")
-                result = self.image_to_base64(
+                result = ImageProcessor.image_to_base64(
                     binary_image, ext=ImageExtensions.PNG.get_extension()
                 )
                 log.info("Successfully converted passport photo to base64")
@@ -392,7 +392,8 @@ class ImageProcessor:
         log.info("Successfully split ROI into sides")
         return left_side, right_side
 
-    def image_to_base64(self, image, ext=ImageExtensions.PNG.get_extension()):
+    @staticmethod
+    def image_to_base64(image, ext=ImageExtensions.PNG.get_extension()):
         """
         Converts an image to a base64-encoded string.
 
@@ -425,7 +426,8 @@ class ImageProcessor:
             log.error(f"Error in base64 conversion: {str(e)}")
             return None
 
-    def base64_to_image(base64_str):
+    @staticmethod
+    def base64_to_image(base64_str, type=ImageType.BINARY_IMAGE):
         """
         Converts a Base64-encoded string to an OpenCV image (NumPy array).
 
@@ -444,8 +446,16 @@ class ImageProcessor:
                 )
 
             log.debug("Decoding base64 string to bytes")
+
+            if base64_str.startswith("data:image"):
+                base64_str = base64_str.split(",")[1]
             # Decode the Base64 string to bytes
             image_bytes = base64.b64decode(base64_str)
+            if not image_bytes:
+                log.error("Failed to decode base64 string")
+                raise ValueError("The provided Base64 string is invalid.")
+            if type == ImageType.BINARY_IMAGE:
+                return image_bytes
 
             log.debug("Converting bytes to NumPy array")
             # Convert bytes to a NumPy array

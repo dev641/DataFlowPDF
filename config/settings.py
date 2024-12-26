@@ -21,6 +21,8 @@ UTILS_DIR = SRC_DIR / "utils"
 PDF_PATH = PDF_DIR / "2024-FC-EROLLGEN-S04-196-FinalRoll-Revision5-HIN-1.pdf"
 
 
+# PDF Process Control Settings
+PDF_PROCESS_CONTROL = 8
 # Pattern Settings
 VOTER_ID_PATTERN = r"\b([A-Z]{2}/\d{2}/\d{3}/\d{6})|([A-Z]{3}\d{7})\b"
 GENDER_AGE_PATTERN = r"(उम्र)\s*:*\s*(\d+)\s*([^\s]+)\s*:*\s*:*\s*(\S+)|([^\s]+)\s*:*\s*(\d+)\s*(लिंग)\s*:*\s*:*\s*(\S+)"

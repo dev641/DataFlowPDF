@@ -3,6 +3,8 @@ from PIL import Image
 from config.settings import IMAGE_DPI, IMAGE_MODE
 import numpy as np
 from src.utils.logger import setup_logger
+from src.utils.utils import get_filename_part
+from src.enums.enums import FileNamePart
 
 log = setup_logger(__name__)
 
@@ -84,3 +86,10 @@ class PdfReader:
                 f"Error extracting image from PDF page {page_num}: {str(e)}"
             )
             return None
+
+    def get_filename(self):
+        filename = get_filename_part(
+            self.file_path, FileNamePart.WITHOUT_EXTENSION
+        )
+        log.info(f"Filename extracted: {filename}")
+        return filename

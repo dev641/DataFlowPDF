@@ -1,5 +1,7 @@
 from multiprocessing import Pool, cpu_count
 from functools import partial
+
+from src.utils.case_converter import CaseConverter
 from .pdf_reader import PdfReader
 from ..image.image_processor import ImageProcessor
 from ..ocr.ocr_processor import OcrProcessor
@@ -182,10 +184,12 @@ class PdfProcessor:
                 data = self.extract_information_from_all_roi(
                     roi_images=roi_images, image_processor=image_processor
                 )
-                voter_data.append(data)
+                voter_data.extend(data)
 
             log.info(f"Successfully processed {len(voter_data)} pages")
-            FileSaver.save_data(data=voter_data, file_name="voter_data")
+            file_name = pdf_reader.get_filename()
+            file_name = CaseConverter.to_upper_snake_case(file_name)
+            FileSaver.save_data(data=voter_data, file_name=file_name)
             log.info("Voter data saved successfully")
 
     def save_voter_information_from_pdf(

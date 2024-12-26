@@ -7,7 +7,7 @@ from colorama import Fore, Style, init
 # Initialize colorama
 init(autoreset=True)
 
-LOGGING_LEVEL = logging.INFO  # Set your desired logging level here
+LOGGING_LEVEL = logging.DEBUG  # Set your desired logging level here
 
 
 class ColorFormatter(logging.Formatter):

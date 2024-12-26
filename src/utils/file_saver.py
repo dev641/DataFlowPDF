@@ -4,8 +4,10 @@ import pandas as pd
 from datetime import datetime
 import uuid
 from pathlib import Path
-from config.settings import PDF_OUTPUT_PATH
+from config.settings import PDF_OUTPUT_PATH, DATABASE_INSERT_BATCH_SIZE
 from src.utils.logger import setup_logger
+from src.db.database import persist_data_in_db
+from src.decorator.decorator import flatten_data, base64_decode
 
 log = setup_logger(__name__)
 
@@ -28,6 +30,9 @@ class FileSaver:
 
             FileSaver.save_to_excel(data=data, file_path=f"{file_path}.xlsx")
             log.info("Data successfully saved to Excel file")
+
+            FileSaver.save_to_db(table_name=file_name, data=data)
+            log.info("Data successfully saved to database")
             return True
         except Exception as e:
             log.error(f"Error saving data: {str(e)}")
@@ -133,4 +138,20 @@ class FileSaver:
 
         except Exception as e:
             log.error(f"Unexpected error during text save: {e}")
+            raise
+
+    @staticmethod
+    @flatten_data
+    @base64_decode
+    def save_to_db(
+        table_name: str,
+        data: list[dict],
+        batch_size=DATABASE_INSERT_BATCH_SIZE,
+    ):
+        log.info(f"Starting database save to table: {table_name}")
+        try:
+            persist_data_in_db(table_name, data, batch_size)
+            log.info("Successfully saved data to database")
+        except Exception as e:
+            log.error(f"Error saving data to database: {e}")
             raise

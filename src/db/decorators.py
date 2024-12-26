@@ -23,16 +23,30 @@ def Query(query_template):
 
     def decorator(func):
         @wraps(func)
-        def wrapper(self, *args, **kwargs):
+        def wrapper(*args, **kwargs):
+            log.info(
+                f"Starting execution of query for function: {func.__name__}"
+            )
+            self = args[0]
             # Get the method signature and parameter names
             signature = inspect.signature(func)
             bound_arguments = signature.bind(self, *args, **kwargs)
             bound_arguments.apply_defaults()
+
             # Extract the parameters and map them to the query
             params = bound_arguments.arguments
             query = query_template.format(**params)
-            result = self.db_instance.execute_query(query)
-            return func(self, result, *args, **kwargs)
+            log.debug(f"Generated query: {query}")
+
+            try:
+                result = self.db_instance.execute_query(query)
+                log.info(f"Query executed successfully for {func.__name__}")
+                return func(self, result, *args, **kwargs)
+            except Exception as e:
+                log.error(
+                    f"Error executing query in {func.__name__}: {str(e)}"
+                )
+                raise
 
         return wrapper
 
@@ -45,15 +59,28 @@ def Transaction(query_template):
     def decorator(func):
         @wraps(func)
         def wrapper(self, *args, **kwargs):
+            log.info(f"Starting transaction for function: {func.__name__}")
             # Get the method signature and parameter names
             signature = inspect.signature(func)
             bound_arguments = signature.bind(*args, **kwargs)
             bound_arguments.apply_defaults()
+
             # Extract the parameters and map them to the query
             params = bound_arguments.arguments
             query = query_template.format(**params)
-            result = self.db_instance.execute_transaction(query)
-            return func(self, result, *args, **kwargs)
+            log.debug(f"Generated transaction query: {query}")
+
+            try:
+                result = self.db_instance.execute_transaction(query)
+                log.info(
+                    f"Transaction completed successfully for {func.__name__}"
+                )
+                return func(self, result, *args, **kwargs)
+            except Exception as e:
+                log.error(
+                    f"Error executing transaction in {func.__name__}: {str(e)}"
+                )
+                raise
 
         return wrapper
 
@@ -61,7 +88,7 @@ def Transaction(query_template):
 
 
 def create_database(database_name):
-    print(f"Checked or created the database: {database_name}")
+    log.info(f"Starting database creation check for: {database_name}")
 
     def decorator(func):
         @wraps(func)
@@ -70,11 +97,10 @@ def create_database(database_name):
                 # Automatically detect the current Windows user
                 current_user = os.getlogin()
                 domain_user = f"{os.environ['USERDOMAIN']}\\{current_user}"
-
-                # Print to check the domain_user string format
-                print(f"Domain and User: {domain_user}")
+                log.debug(f"Detected domain user: {domain_user}")
 
                 # Create an engine connected to the master database
+                log.info("Creating database engine connection")
                 engine = create_engine(
                     DatabaseSettings.get_master_connection_string(
                         DatabaseSettings
@@ -84,6 +110,9 @@ def create_database(database_name):
                 )
 
                 with engine.connect() as connection:
+                    log.debug(
+                        f"Executing database creation query for: {database_name}"
+                    )
                     connection.execute(
                         text(
                             f"""
@@ -100,10 +129,13 @@ def create_database(database_name):
                             """
                         )
                     )
-                    print(f"Database {database_name} created successfully.")
+                    log.info(
+                        f"Database {database_name} creation/check completed successfully"
+                    )
 
             except Exception as e:
-                print(f"Error: {e}")
+                log.error(f"Error during database creation: {str(e)}")
+                raise
 
             return func(*args, **kwargs)
 
@@ -113,37 +145,46 @@ def create_database(database_name):
 
 
 def analyze_data(func):
+    def assign_column_type(key, value, schema):
+        if isinstance(value, int):
+            schema[key] = Integer
+            log.debug(f"Column '{key}' detected as Integer type")
+        elif isinstance(value, str):
+            schema[key] = Unicode(255)
+            log.debug(f"Column '{key}' detected as Unicode type")
+            # if any(ord(c) > 127 for c in value):
+            #     schema[key] = Unicode(255)
+            #     log.debug(f"Column '{key}' detected as Unicode type")
+            # else:
+            #     schema[key] = String(255)
+            #     log.debug(f"Column '{key}' detected as String type")
+        elif isinstance(value, bytes):
+            schema[key] = LargeBinary
+            log.debug(f"Column '{key}' detected as LargeBinary type")
+        else:
+            schema[key] = Unicode(255)
+            log.debug(f"Column '{key}' defaulted to String type")
+
     @wraps(func)
     def wrapper(*args, **kwargs):
-        print("Analyzing data...")
+        log.info("Starting data analysis...")
         data = kwargs.get("data", None)
         schema = {}
+
+        log.debug(f"Analyzing {len(data)} records for schema detection")
         for record in data:
             for key, value in record.items():
                 # Dynamically determine the column type based on the value
-                if isinstance(value, int):
-                    schema[key] = Integer
-                elif isinstance(value, str):
-                    if any(ord(c) > 127 for c in value):
-                        # Use Unicode or UnicodeText for multilingual support (including Hindi)
-                        schema[key] = Unicode(
-                            255
-                        )  # Unicode for supporting non-ASCII characters
-                    else:
-                        schema[key] = String(
-                            255
-                        )  # Standard string for ASCII characters
-                elif isinstance(
-                    value, bytes
-                ):  # Check for binary data (images)
-                    schema[key] = (
-                        LargeBinary  # Use LargeBinary for binary data (image)
-                    )
+                if key is not None:
+                    assign_column_type(key, value, schema)
                 else:
-                    schema[key] = String(255)  # Default type for unknown
+                    log.warn("Key is None, column is set to unicode")
+                    assign_column_type("column", value, schema)
+
+        log.info(f"Schema analysis completed with {len(schema)} columns")
         # Attach the schema to the function
         setattr(func, "schema", schema)
-        # Attach the schema to the wrapper function (not the original function)
+        # Attach the schema to the wrapper function
         wrapper.schema = schema
 
         return func(*args, **kwargs)
@@ -154,21 +195,27 @@ def analyze_data(func):
 def create_table(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
-        print("Creating table...")
+        log.info("Starting table creation process...")
         self = args[0]
         table_name = kwargs.get("table_name", None)
         schema = getattr(wrapper, "schema", None)
+
+        log.debug(f"Creating table structure for: {table_name}")
         columns = [Column('id', Integer, primary_key=True, autoincrement=True)]
         for column_name, column_type in schema.items():
             columns.append(Column(column_name, column_type, nullable=True))
+            log.debug(f"Added column: {column_name} with type: {column_type}")
 
         table = Table(table_name, self.metadata, *columns)
-        table.create(
-            self.engine, checkfirst=True
-        )  # checkfirst ensures it won't create if already exists
+        log.info(f"Creating table {table_name} in database")
+        table.create(self.engine, checkfirst=True)
+
+        log.debug("Attaching table object to function and wrapper")
         setattr(func, "table", table)
         wrapper.table = table
         kwargs["table"] = table
+
+        log.info(f"Table {table_name} created successfully")
         return func(*args, **kwargs)
 
     return wrapper

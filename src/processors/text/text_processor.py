@@ -49,7 +49,7 @@ class TextProcessor:
                 data_list = re.sub(r"\s+", "", data_list)
                 if re.match(VOTER_ID_PATTERN, data_list):
                     log.debug(f"Voter ID found: {data_list}")
-                    user_data.append(['id', data_list])
+                    user_data.append(['voter_id', data_list])
 
         log.info(f"Extracted {len(user_data)} user data items")
         return user_data
